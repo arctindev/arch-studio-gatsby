@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 import "@fontsource/spartan/500.css"
 import "@fontsource/spartan/700.css"
+import "@fontsource/spartan/400.css"
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -10,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
     margin: 0;
     padding: 0;
-    font-size: 15px;
+    font-size: 16px;
   }
   body {
     font-family: "spartan";
@@ -21,6 +22,9 @@ const GlobalStyle = createGlobalStyle`
   }
   li {
       list-style: none;
+  }
+  div , a , button , input , p , li , ul, main, article {
+    font-size: 15px;
   }
 `
 
