@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: "spartan";
     font-weight: 500;
+    background-color: ${({theme}) => theme.colors.bodyBG};
   }
   a, button, input, div {
       -webkit-tap-highlight-color: transparent;

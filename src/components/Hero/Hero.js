@@ -4,9 +4,8 @@ import {
   StyledHeroWrapper,
   StyledHeroTitle,
   StyledHeroText,
-  StyledHeroButton,
 } from "./Hero.styles"
-import ButtonArrow from "../../assets/icons/button-arrow.inline.svg"
+import Button from "../Button/Button"
 
 export default function Hero() {
   return (
@@ -17,10 +16,7 @@ export default function Hero() {
           Project made for an art museum near Southwest London. Project Paramour
           is a statement of bold, modern architecture.
         </StyledHeroText>
-        <StyledHeroButton>
-          <span>See Our Portfolio</span>
-          <ButtonArrow />
-        </StyledHeroButton>
+        <Button width="250px" textContent="See Our Portfolio" />
       </StyledHeroWrapper>
     </StyledHero>
   )

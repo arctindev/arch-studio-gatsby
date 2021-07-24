@@ -26,13 +26,13 @@ export const ArticleTitle = styled.h1`
   line-height: 48px;
   font-size: 40px;
   letter-spacing: -1.43px;
-  color: #1b1d23;
+  color: ${({theme})=>theme.colors.landingArticleTitle};
   margin-top: 4.5rem;
   margin-bottom: 2rem;
 `
 
 export const ArticleText = styled.p`
   line-height: 25px;
-  color: #60636d;
+  color: ${({theme})=>theme.colors.landingArticleText};
   margin-bottom: 2rem;
 `

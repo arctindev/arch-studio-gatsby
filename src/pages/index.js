@@ -6,10 +6,13 @@ import LandingArticle from "../components/LandingArticle/LandingArticle"
 import LandingAboutUs from "../components/LandingAboutUs/LandingAboutUs"
 import LandingFeatured from "../components/LandingFeatured/LandingFeatured"
 import Footer from "../components/Footer/Footer"
+import { ThemeProvider } from 'styled-components';
+import { dayTheme } from "../global/themes/themes"
 
 export default function Home() {
   return (
     <div>
+      <ThemeProvider theme={dayTheme}>
       <GlobalStyle />
       <Header />
       <Hero />
@@ -17,6 +20,7 @@ export default function Home() {
       <LandingAboutUs />
       <LandingFeatured />
       <Footer />
+      </ThemeProvider>
     </div>
   )
 }

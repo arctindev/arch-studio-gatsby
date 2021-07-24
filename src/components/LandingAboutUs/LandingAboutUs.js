@@ -1,6 +1,11 @@
 import React from "react"
-import ButtonArrow from "../../assets/icons/button-arrow.inline.svg"
-import { InnerWrapper, LandingAboutUsWrapper, MaskedImage, StyledButton, StyledTitle } from "./LandingAboutUs.styles"
+import Button from "../Button/Button"
+import {
+  InnerWrapper,
+  LandingAboutUsWrapper,
+  MaskedImage,
+  StyledTitle,
+} from "./LandingAboutUs.styles"
 
 export default function LandingAboutUs() {
   return (
@@ -8,10 +13,7 @@ export default function LandingAboutUs() {
       <MaskedImage />
       <InnerWrapper>
         <StyledTitle>Small team, big ideas</StyledTitle>
-        <StyledButton>
-          <span>About Us</span>
-          <ButtonArrow />
-        </StyledButton>
+        <Button width="190px" textContent="About Us" />
       </InnerWrapper>
     </LandingAboutUsWrapper>
   )

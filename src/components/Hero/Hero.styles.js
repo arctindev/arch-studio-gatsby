@@ -5,13 +5,14 @@ export const StyledHero = styled.div`
   width: 100%;
   height: 560px;
   padding: 0 6.5vw 0 6.5vw;
-  color: white;
+  color: ${({theme})=>theme.colors.heroFont};
   background: url(${image}) no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 5rem;
+  margin-top: 6rem;
 `
 
 export const StyledHeroWrapper = styled.div`
@@ -31,20 +32,4 @@ export const StyledHeroText = styled.p`
   font-size: 15px;
   line-height: 25px;
   margin-bottom: 4rem;
-`
-
-export const StyledHeroButton = styled.button`
-  border: none;
-  height: 70px;
-  width: 250px;
-  color: white;
-  background-color: #1b1d23;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  & > span {
-    font-size: 15px;
-    line-height: 25px;
-    font-weight: bold;
-  }
 `
