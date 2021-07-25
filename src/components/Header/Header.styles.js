@@ -20,36 +20,35 @@ export const HamburgerButton = styled.button`
 `
 
 export const HamburgerNavigation = styled.nav`
-  @keyframes active {
-    0% {
-      padding: 0;
-      width: 0;
-      height: 0;
-      color: transparent;
-    }
-    75% {
-      padding: 3rem;
-      color: transparent;
-    }
-    100% {
-      width: calc(100% - 6.5vw);
-      height: 240px;
-    }
-  }
   z-index: 1001;
   position: fixed;
   top: 6rem;
   right: 0;
-  width: calc(100% - 6.5vw);
-  height: 240px;
+  width : ${({active}) => active ? "calc(100% - 6.5vw)" : "0px"};
+  height: ${({active}) => active ? "240px" : "0px"};
   background-color: ${({ theme }) => theme.colors.dropdownBG};
   opacity: 0.95;
-  padding: 3rem;
-  animation: active 0.4s ease-in-out;
+  padding: ${({active}) => active ? "3rem" : "0px"};;
+  
+  transition: 0.4s all ease-in-out;
   color: ${({ theme }) => theme.colors.dropdownFont};
 `
 
-export const NavigationList = styled.ul``
+export const NavigationList = styled.ul`
+
+display: ${({active}) => active ? "block" : "none"};
+@keyframes activeMenu {
+    0% {
+      color: transparent;
+    }
+    75% {
+      color: transparent;
+    }
+    100% {
+    }
+  }
+ animation: activeMenu 0.4s ease-in-out; 
+`
 
 export const ListItem = styled.li`
   margin-bottom: 2rem;

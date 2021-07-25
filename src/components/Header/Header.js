@@ -22,15 +22,16 @@ export default function Header() {
       <HamburgerButton onClick={() => handleButtonClick(active)}>
         {active ? <HamburgerActive /> : <Hamburger />}
       </HamburgerButton>
-      {active ? (
-        <HamburgerNavigation>
-          <NavigationList>
+      
+        <HamburgerNavigation active={active}>
+        {active ? (  <NavigationList active={active}>
             <ListItem>Portfolio</ListItem>
             <ListItem>About Us</ListItem>
             <ListItem>Contact</ListItem>
-          </NavigationList>
+            </NavigationList>
+            ) : null}
         </HamburgerNavigation>
-      ) : null}
+      
     </StyledHeader>
   )
 }

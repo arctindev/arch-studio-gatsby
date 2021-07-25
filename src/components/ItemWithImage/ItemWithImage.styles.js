@@ -8,13 +8,24 @@ export const ItemWrapper = styled.div`
 `
 
 export const MaskedImage = styled.div`
+  /* IT WORKS! Fallen in love with react ! */
+  /* @keyframes colors{
+    0%{
+      filter: contrast(125%) saturate(170%) grayscale(20%);
+    }50%{
+      filter: contrast(125%) saturate(170%) grayscale(50%) hue-rotate(-60deg) brightness(80%);
+    }100%{
+      filter: contrast(125%) saturate(170%) grayscale(20%);
+    }
+  } */  
   z-index: -2;
   position: absolute;
   width: 100%;
   height: inherit;
   background: url(${({ image }) => image}) no-repeat;
-  filter: contrast(125%) saturate(170%) grayscale(20%);
   background-size: cover;
+  filter: contrast(125%) saturate(170%) grayscale(20%);
+  /* animation: ${({active}) => active ? 'colors' : 'none'} 5s ease-in-out; */
   &:after {
     content: "";
     position: absolute;
