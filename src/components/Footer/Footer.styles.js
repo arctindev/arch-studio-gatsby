@@ -2,6 +2,8 @@ import styled from "styled-components"
 
 export const FooterWrapper = styled.footer`
   position: relative;
+  z-index: -2;
+  background-color: white;
   height: 440px;
   width: inherit;
   &:before {

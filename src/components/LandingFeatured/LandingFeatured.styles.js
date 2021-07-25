@@ -1,14 +1,14 @@
 import styled from "styled-components"
 
 export const FeaturedWrapper = styled.div`
-  height: 960px;
+  min-height: 960px;
   width: 100%;
-  padding: 0vh 6.5vw 0 6.5vw;
-  margin-bottom: 5rem;
+  padding: 5rem 6.5vw 5rem 6.5vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  background-color: white;
 `
 
 export const StyledTitle = styled.h2`

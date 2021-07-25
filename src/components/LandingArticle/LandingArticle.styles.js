@@ -1,7 +1,9 @@
 import styled from "styled-components"
 
 export const StyledWrapper = styled.main`
-  position: relative;
+  position: fixed;
+  z-index: -5;
+  top:10rem;
   width: 100%;
   height: 640px;
   display: flex;

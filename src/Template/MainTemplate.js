@@ -5,6 +5,8 @@ import { ThemeProvider } from "styled-components"
 import { dayTheme } from "../global/themes/themes"
 import GlobalStyle from "../global/styles/GlobalStyles"
 
+
+
 export default function MainTemplate({ children }) {
   return (
     <ThemeProvider theme={dayTheme}>

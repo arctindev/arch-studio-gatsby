@@ -18,7 +18,7 @@ export const MaskedImage = styled.div`
       filter: contrast(125%) saturate(170%) grayscale(20%);
     }
   } */  
-  z-index: -2;
+  z-index: 1;
   position: absolute;
   width: 100%;
   height: inherit;
@@ -50,6 +50,7 @@ export const ItemTextWrapper = styled.div`
 `
 
 export const ItemTitle = styled.h3`
+  z-index: 2;
   line-height: 25px;
   font-weight: bold;
   font-size: 18px;
@@ -57,6 +58,7 @@ export const ItemTitle = styled.h3`
 `
 
 export const ItemText = styled.p`
+  z-index: 2;
   font-weight: normal;
   font-size: 15px;
 `

@@ -12,7 +12,6 @@ export const StyledHero = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 5rem;
   margin-top: 6rem;
 `
 

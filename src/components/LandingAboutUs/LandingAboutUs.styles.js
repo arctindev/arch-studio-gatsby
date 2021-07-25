@@ -10,7 +10,6 @@ export const LandingAboutUsWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5rem;
 `
 
 export const MaskedImage = styled.div`
