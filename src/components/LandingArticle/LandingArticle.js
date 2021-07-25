@@ -7,7 +7,7 @@ import {
 
 export default function LandingArticle() {
   return (
-    <StyledWrapper>
+    <StyledWrapper >
       <ArticleTitle>Welcome to Arch Studio</ArticleTitle>
       <ArticleText>
         We have a unique network and skillset to help bring your projects to

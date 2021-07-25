@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledWhiteSpace = styled.main`
+  z-index:-1;
   top:10rem;
   content:'';
   width: 100%;

@@ -4,7 +4,7 @@ export const FooterWrapper = styled.footer`
   position: relative;
   z-index: -2;
   background-color: white;
-  height: 440px;
+  height: 640px;
   width: inherit;
   &:before {
     z-index: -1;
@@ -12,7 +12,7 @@ export const FooterWrapper = styled.footer`
     position: absolute;
     width: 100%;
     height: ${() => {
-      return 440 - 60
+      return 640 - 60
     }}px;
     background-color: ${({ theme }) => theme.colors.footerBG};
     bottom: 0;

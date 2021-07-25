@@ -44,33 +44,33 @@ export const portfolioGaleryData = [
       text: "April 2015",
     },
     {
-      image: image07,
-      title: "Grand Edelweiss Hotel",
-      text: "Fecember 2013",
-    },
-    {
-      image: image08,
-      title: "Netcry Tower",
-      text: "August 2012",
-    },
-    {
-      image: image09,
-      title: "Hypers",
-      text: "January 2012",
-    },
-    {
-      image: image10,
-      title: "SXIV Tower",
-      text: "March 2011",
-    },
-    {
-      image: image11,
-      title: "Trinity Bank Tower",
-      text: "September 2010",
-    },
-    {
-      image: image12,
-      title: "Project Paramour",
-      text: "February 2008",
-    },
+        image: image07,
+        title: "Grand Edelweiss Hotel",
+        text: "Fecember 2013",
+      },
+      {
+        image: image08,
+        title: "Netcry Tower",
+        text: "August 2012",
+      },
+      {
+        image: image09,
+        title: "Hypers",
+        text: "January 2012",
+      },
+      {
+        image: image10,
+        title: "SXIV Tower",
+        text: "March 2011",
+      },
+      {
+        image: image11,
+        title: "Trinity Bank Tower",
+        text: "September 2010",
+      },
+      {
+        image: image12,
+        title: "Project Paramour",
+        text: "February 2008",
+      },
   ]

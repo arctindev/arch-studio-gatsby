@@ -1,6 +1,6 @@
-import firstImage from "../../assets/images/landing/Featured01.jpg"
-import secondImage from "../../assets/images/landing/Featured02.jpg"
-import thirdImage from "../../assets/images/landing/Featured03.jpg"
+import firstImage from "../assets/images/landing/Featured01.jpg"
+import secondImage from "../assets/images/landing/Featured02.jpg"
+import thirdImage from "../assets/images/landing/Featured03.jpg"
 
 export const LandingData = [
   {
