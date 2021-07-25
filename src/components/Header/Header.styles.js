@@ -11,7 +11,7 @@ export const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: ${({theme})=>theme.colors.headerBG};
+  background-color: ${({ theme }) => theme.colors.headerBG};
 `
 
 export const HamburgerButton = styled.button`
@@ -42,11 +42,11 @@ export const HamburgerNavigation = styled.nav`
   right: 0;
   width: calc(100% - 6.5vw);
   height: 240px;
-  background-color: ${({theme})=>theme.colors.dropdownBG};
+  background-color: ${({ theme }) => theme.colors.dropdownBG};
   opacity: 0.95;
   padding: 3rem;
   animation: active 0.4s ease-in-out;
-  color: ${({theme})=>theme.colors.dropdownFont};
+  color: ${({ theme }) => theme.colors.dropdownFont};
 `
 
 export const NavigationList = styled.ul``

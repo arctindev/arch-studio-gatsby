@@ -4,8 +4,8 @@ export const StyledButton = styled.button`
   border: none;
   height: 70px;
   width: ${({ width }) => width};
-  color: ${({theme})=>theme.colors.buttonFont};
-  background-color: ${({theme})=>theme.colors.buttonBG};
+  color: ${({ theme }) => theme.colors.buttonFont};
+  background-color: ${({ theme }) => theme.colors.buttonBG};
   display: flex;
   justify-content: center;
   align-items: center;

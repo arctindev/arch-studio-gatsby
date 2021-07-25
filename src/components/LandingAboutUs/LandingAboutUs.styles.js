@@ -1,11 +1,11 @@
 import styled from "styled-components"
-import image from "../../assets/images/landing-about-us-image.jpg"
+import image from "../../assets/images/landing/landing-about-us-image.jpg"
 
 export const LandingAboutUsWrapper = styled.div`
   position: relative;
   width: 100%;
   height: 560px;
-  color: ${({theme})=>theme.colors.landingAboutUsText};
+  color: ${({ theme }) => theme.colors.landingAboutUsText};
   background: none;
   display: flex;
   justify-content: center;
@@ -20,6 +20,7 @@ export const MaskedImage = styled.div`
   height: inherit;
   background: url(${image}) no-repeat;
   background-size: cover;
+  filter: contrast(120%) saturate(160%) grayscale(5%);
   &:after {
     content: "";
     position: absolute;
@@ -28,7 +29,7 @@ export const MaskedImage = styled.div`
     background-color: black;
     top: 0;
     left: 0;
-    opacity: 0.5;
+    opacity: 0.4;
   }
 `
 

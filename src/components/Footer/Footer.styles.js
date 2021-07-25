@@ -12,7 +12,7 @@ export const FooterWrapper = styled.footer`
     height: ${() => {
       return 440 - 60
     }}px;
-    background-color: ${({theme})=>theme.colors.footerBG};
+    background-color: ${({ theme }) => theme.colors.footerBG};
     bottom: 0;
     left: 0;
   }
@@ -30,7 +30,7 @@ export const FooterContent = styled.div`
 export const BrandingWrapper = styled.div`
   height: 120px;
   width: 120px;
-  background-color: ${({theme})=>theme.colors.footerBranding};
+  background-color: ${({ theme }) => theme.colors.footerBranding};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,6 +48,6 @@ export const FooterList = styled.ul`
 `
 
 export const ListItem = styled.li`
-  color: ${({theme})=>theme.colors.footerNavLink};
+  color: ${({ theme }) => theme.colors.footerNavLink};
   font-weight: bold;
 `

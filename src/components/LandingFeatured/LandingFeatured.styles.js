@@ -3,8 +3,6 @@ import styled from "styled-components"
 export const FeaturedWrapper = styled.div`
   height: 960px;
   width: 100%;
-  justify-content: center;
-  align-items: center;
   padding: 0vh 6.5vw 0 6.5vw;
   margin-bottom: 5rem;
   display: flex;
@@ -14,7 +12,7 @@ export const FeaturedWrapper = styled.div`
 `
 
 export const StyledTitle = styled.h2`
-  color: ${({theme})=>theme.colors.landingFeaturedTitle};
+  color: ${({ theme }) => theme.colors.landingFeaturedTitle};
   letter-spacing: -1.43px;
   line-height: 48px;
   font-weight: bold;
