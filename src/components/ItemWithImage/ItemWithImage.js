@@ -9,16 +9,22 @@ import {
 
 export default function ItemWithImage({ image, title, text }) {
   const [active, setActive] = useState(false)
-
+  let timeout = ""
   const handleMouseEnter = () => {
+    clearTimeout(timeout)
     setActive(() => true)
   }
   const handleMouseLeave = () => {
-    setActive(() => false)
+    timeout = setTimeout(() => {
+      setActive(() => false)
+    }, 800)
   }
   return (
-    <ItemWrapper onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <MaskedImage image={image} active={active}/>
+    <ItemWrapper
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <MaskedImage image={image} active={active} />
       <ItemTextWrapper>
         <ItemTitle>{title}</ItemTitle>
         <ItemText>{text}</ItemText>

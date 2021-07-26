@@ -12,15 +12,17 @@ export const dayTheme = {
     /* Buttons */
     buttonBG: firstColor,
     buttonFont: mainColor,
+    buttonHoverBG:forthColor,
     /* Footer */
     footerBG: secondColor,
     footerBranding: firstColor,
     footerNavLink: thirdColor,
+    footerNavLinkHover: firstColor,
     /* Header */
     headerBG: mainColor,
     /* Nav Dropdown */
     dropdownBG: secondColor,
-    dropdownFont: firstColor,
+    dropdownLinkColor: firstColor,
     /* ItemWithImage */
     itemWithImageText: mainColor,
     /* ------------ Landing page ----------------- */

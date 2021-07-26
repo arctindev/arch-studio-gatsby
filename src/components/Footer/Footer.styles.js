@@ -1,8 +1,9 @@
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 export const FooterWrapper = styled.footer`
   position: relative;
-  z-index: -2;
+  z-index: 0;
   background-color: white;
   height: 440px;
   width: inherit;
@@ -21,6 +22,7 @@ export const FooterWrapper = styled.footer`
 `
 
 export const FooterContent = styled.div`
+  z-index: 0;
   height: inherit;
   width: inherit;
   display: flex;
@@ -39,7 +41,7 @@ export const BrandingWrapper = styled.div`
   margin-bottom: 2rem;
 `
 
-export const FooterList = styled.ul`
+export const FooterList = styled.div`
   width: inherit;
   height: 140px;
   display: flex;
@@ -49,7 +51,13 @@ export const FooterList = styled.ul`
   margin-bottom: 2rem;
 `
 
-export const ListItem = styled.li`
+export const StyledLink = styled(Link)`
   color: ${({ theme }) => theme.colors.footerNavLink};
   font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  &:hover{
+  color: ${({ theme }) => theme.colors.footerNavLinkHover};
+  }
 `

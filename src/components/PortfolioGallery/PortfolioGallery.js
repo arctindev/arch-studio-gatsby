@@ -1,12 +1,12 @@
-import React from 'react'
-import { PortfolioWrapper } from './PortfolioGallery.styles'
-import { portfolioGaleryData } from './PortfolioGalleryData'
-import ItemWithImage from '../ItemWithImage/ItemWithImage'
+import React from "react"
+import { PortfolioWrapper } from "./PortfolioGallery.styles"
+import { portfolioGaleryData } from "./PortfolioGalleryData"
+import ItemWithImage from "../ItemWithImage/ItemWithImage"
 
 export default function PortfolioGallery() {
-    return (
-        <PortfolioWrapper>
-          {portfolioGaleryData.map((item, index) => {
+  return (
+    <PortfolioWrapper>
+      {portfolioGaleryData.map((item, index) => {
         return (
           <ItemWithImage
             key={index}
@@ -15,7 +15,7 @@ export default function PortfolioGallery() {
             text={item.text}
           />
         )
-      })}  
-        </PortfolioWrapper>
-    )
+      })}
+    </PortfolioWrapper>
+  )
 }

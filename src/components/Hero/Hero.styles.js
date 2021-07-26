@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import image from "../../assets/images/landing/hero-image.jpg"
+import { Link } from "gatsby"
 
 export const StyledHero = styled.div`
   width: 100%;
@@ -41,14 +42,26 @@ export const StyledButton = styled.button`
   color: ${({ theme }) => theme.colors.buttonFont};
   background-color: ${({ theme }) => theme.colors.buttonBG};
   filter: brightness(1.25);
-  opacity: 0.90;
+  opacity: 0.9;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
   & > span {
     font-size: 15px;
     line-height: 25px;
     font-weight: bold;
     margin-right: 1.5rem;
   }
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.buttonHoverBG};
+    filter: brightness(0.9);
+    opacity: 1;
+  }
+`
+
+export const StyledLink = styled(Link)`
+  color: ${({ theme }) => theme.colors.footerNavLink};
+  text-decoration: none;
 `

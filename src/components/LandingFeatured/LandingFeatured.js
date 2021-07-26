@@ -18,7 +18,11 @@ export default function LandingFeatured() {
           />
         )
       })}
-      <Button width="inherit" textContent="See All" />
+      <Button
+        width="inherit"
+        textContent="See All"
+        linkDirection="/portfolio"
+      />
     </FeaturedWrapper>
   )
 }

@@ -38,7 +38,7 @@ export const InnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0vh 6.5vw 0 6.5vw;
+  padding: 0vh 13vw 0 6.5vw;
 `
 
 export const StyledTitle = styled.h2`

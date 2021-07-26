@@ -13,7 +13,7 @@ export default function LandingAboutUs() {
       <MaskedImage />
       <InnerWrapper>
         <StyledTitle>Small team, big ideas</StyledTitle>
-        <Button width="190px" textContent="About Us" />
+        <Button width="190px" textContent="About Us" linkDirection="/about" />
       </InnerWrapper>
     </LandingAboutUsWrapper>
   )

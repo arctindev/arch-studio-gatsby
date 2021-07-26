@@ -8,16 +8,18 @@ export const ItemWrapper = styled.div`
 `
 
 export const MaskedImage = styled.div`
-  /* IT WORKS! Fallen in love with react ! */
-  /* @keyframes colors{
-    0%{
-      filter: contrast(125%) saturate(170%) grayscale(20%);
-    }50%{
-      filter: contrast(125%) saturate(170%) grayscale(50%) hue-rotate(-60deg) brightness(80%);
-    }100%{
+  @keyframes colors {
+    0% {
       filter: contrast(125%) saturate(170%) grayscale(20%);
     }
-  } */  
+    50% {
+      filter: contrast(125%) saturate(170%) grayscale(30%) hue-rotate(5deg)
+        brightness(75%);
+    }
+    100% {
+      filter: contrast(125%) saturate(170%) grayscale(20%);
+    }
+  }
   z-index: 1;
   position: absolute;
   width: 100%;
@@ -25,13 +27,13 @@ export const MaskedImage = styled.div`
   background: url(${({ image }) => image}) no-repeat;
   background-size: cover;
   filter: contrast(125%) saturate(170%) grayscale(20%);
-  /* animation: ${({active}) => active ? 'colors' : 'none'} 5s ease-in-out; */
+  animation: ${({ active }) => (active ? "colors" : "none")} 1s ease-in-out;
   &:after {
     content: "";
     position: absolute;
     width: inherit;
     height: inherit;
-    background-image: linear-gradient(to top , black, transparent);
+    background-image: linear-gradient(to top, black, transparent);
     background-size: cover;
     top: 0;
     left: 0;
