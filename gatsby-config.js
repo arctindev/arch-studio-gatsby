@@ -6,6 +6,7 @@
 
 module.exports = {
   /* Your site config here */
+  pathPrefix: '/arch-studio-gatsby',
   plugins: [
     {
       resolve: "gatsby-plugin-react-svg",

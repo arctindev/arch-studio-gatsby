@@ -5,6 +5,7 @@ import {
   FooterList,
   FooterWrapper,
   StyledLink,
+  StyledBrandingLink
 } from "./Footer.styles"
 import Branding from "../../assets/branding/branding-white.inline.svg"
 import Button from "../Button/Button"
@@ -13,11 +14,11 @@ export default function Footer() {
   return (
     <FooterWrapper>
       <FooterContent>
-        <StyledLink to="/">
+        <StyledBrandingLink to="/">
           <BrandingWrapper>
             <Branding />
           </BrandingWrapper>
-        </StyledLink>
+        </StyledBrandingLink>
         <FooterList>
           <StyledLink to="/portfolio">Portfolio</StyledLink>
           <StyledLink to="/about">About Us</StyledLink>

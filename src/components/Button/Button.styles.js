@@ -20,6 +20,8 @@ export const StyledButton = styled.button`
   }
   &:hover {
     background-color: ${({ theme }) => theme.colors.buttonHoverBG};
+    filter: brightness(0.9);
+    opacity: 0.9;
   }
 `
 

@@ -14,6 +14,7 @@ export const dayTheme = {
     buttonFont: mainColor,
     buttonHoverBG:forthColor,
     /* Footer */
+    footerMainBG: mainColor,
     footerBG: secondColor,
     footerBranding: firstColor,
     footerNavLink: thirdColor,
@@ -35,5 +36,10 @@ export const dayTheme = {
     landingArticleText: forthColor,
     /* LandingFeatured */
     landingFeaturedTitle: firstColor,
+    /* LandingWhitespace */
+    landingWhitespace: mainColor,
+    /* AboutUsHero */
+    aboutUsHeroBG: mainColor,
+    aboutUsHeroDecoration: mainColor,
   },
 }

@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React from "react"
 import { StyledButton, StyledLink } from "./Button.styles"
 import ButtonArrow from "../../assets/icons/button-arrow.inline.svg"
 

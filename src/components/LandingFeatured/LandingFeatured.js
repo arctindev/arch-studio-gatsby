@@ -2,13 +2,13 @@ import React from "react"
 import { FeaturedWrapper, StyledTitle } from "./LandingFeatured.styles"
 import Button from "../Button/Button"
 import ItemWithImage from "../ItemWithImage/ItemWithImage"
-import { LandingData } from "./LandingData"
+import { LandingFeaturedData } from "../../data/LandingData/LandingData"
 
 export default function LandingFeatured() {
   return (
     <FeaturedWrapper>
       <StyledTitle>Featured</StyledTitle>
-      {LandingData.map((item, index) => {
+      {LandingFeaturedData.map((item, index) => {
         return (
           <ItemWithImage
             key={index}

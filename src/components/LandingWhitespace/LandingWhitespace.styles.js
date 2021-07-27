@@ -7,16 +7,16 @@ export const StyledWhiteSpace = styled.main`
   height: 2000px;
   background-image: linear-gradient(
     to bottom,
-    white,
-    white,
+    ${({ theme }) => theme.colors.landingWhitespace},
+    ${({ theme }) => theme.colors.landingWhitespace},
     transparent,
     transparent,
     transparent,
     transparent,
     transparent,
     transparent,
-    white,
-    white
+    ${({ theme }) => theme.colors.landingWhitespace},
+    ${({ theme }) => theme.colors.landingWhitespace}
   );
   display: flex;
   flex-direction: column;

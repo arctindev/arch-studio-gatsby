@@ -13,14 +13,15 @@ export const LandingAboutUsWrapper = styled.div`
 `
 
 export const MaskedImage = styled.div`
-  z-index: -2;
+  z-index: 0;
   position: absolute;
   width: 100%;
   height: inherit;
   background: url(${image}) no-repeat;
   background-size: cover;
-  filter: contrast(120%) saturate(160%) grayscale(5%);
+  filter: contrast(120%) saturate(160%) grayscale(15%);
   &:after {
+    z-index: 1;
     content: "";
     position: absolute;
     width: inherit;
@@ -33,6 +34,7 @@ export const MaskedImage = styled.div`
 `
 
 export const InnerWrapper = styled.div`
+  z-index: 2;
   width: inherit;
   height: 200px;
   display: flex;

@@ -8,8 +8,8 @@ import {
 } from "./ItemWithImage.styles"
 
 export default function ItemWithImage({ image, title, text }) {
-  const [active, setActive] = useState(false)
-  let timeout = ""
+  const [active, setActive] = useState(false);
+  let timeout = '';
   const handleMouseEnter = () => {
     clearTimeout(timeout)
     setActive(() => true)
@@ -17,8 +17,9 @@ export default function ItemWithImage({ image, title, text }) {
   const handleMouseLeave = () => {
     timeout = setTimeout(() => {
       setActive(() => false)
-    }, 800)
-  }
+    }, 750)
+    }
+  
   return (
     <ItemWrapper
       onMouseEnter={handleMouseEnter}

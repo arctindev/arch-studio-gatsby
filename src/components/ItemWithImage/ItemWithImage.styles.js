@@ -27,7 +27,7 @@ export const MaskedImage = styled.div`
   background: url(${({ image }) => image}) no-repeat;
   background-size: cover;
   filter: contrast(125%) saturate(170%) grayscale(20%);
-  animation: ${({ active }) => (active ? "colors" : "none")} 1s ease-in-out;
+  animation: ${({ active }) => (active ? "colors" : "none")} 0.9s ease-in-out;
   &:after {
     content: "";
     position: absolute;

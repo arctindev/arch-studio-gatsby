@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 export const FooterWrapper = styled.footer`
   position: relative;
   z-index: 0;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.footerMainBG};
   height: 440px;
   width: inherit;
   &:before {
@@ -31,6 +31,12 @@ export const FooterContent = styled.div`
   align-items: center;
 `
 
+export const StyledBrandingLink = styled(Link)`
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 2rem;
+`
+
 export const BrandingWrapper = styled.div`
   height: 120px;
   width: 120px;
@@ -38,7 +44,6 @@ export const BrandingWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
 `
 
 export const FooterList = styled.div`

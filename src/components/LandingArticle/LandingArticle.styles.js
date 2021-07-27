@@ -1,28 +1,9 @@
 import styled from "styled-components"
-
-export const StyledWrapper = styled.main`
+export const FixedWrapper = styled.div`
   position: fixed;
   z-index: -5;
   top: 7rem;
-  width: 100%;
-  height: 640px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: left;
-  padding: 0 6.5vw 0 6.5vw;
-  margin-bottom: 7rem;
-  &:before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 4rem;
-    background-color: #c8ccd8;
-    top: 0;
-    left: 6.5vw;
-  }
-`
+`;
 
 export const ArticleTitle = styled.h1`
   line-height: 48px;
