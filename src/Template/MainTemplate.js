@@ -8,13 +8,12 @@ import { ViewportProvider } from "../Hooks/viewport"
 
 export default function MainTemplate({ children }) {
   return (
-
     <ThemeProvider theme={dayTheme}>
       <ViewportProvider>
-      <GlobalStyle />
-      <Header />
-      {children}
-      <Footer />
+        <GlobalStyle />
+        <Header />
+        {children}
+        <Footer />
       </ViewportProvider>
     </ThemeProvider>
   )

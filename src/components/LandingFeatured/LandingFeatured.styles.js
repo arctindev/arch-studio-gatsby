@@ -8,7 +8,7 @@ export const FeaturedWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.landingFeaturedBG};
 `
 
 export const StyledTitle = styled.h2`

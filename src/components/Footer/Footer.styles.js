@@ -62,7 +62,7 @@ export const StyledLink = styled(Link)`
   cursor: pointer;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
-  &:hover{
-  color: ${({ theme }) => theme.colors.footerNavLinkHover};
+  &:hover {
+    color: ${({ theme }) => theme.colors.footerNavLinkHover};
   }
 `

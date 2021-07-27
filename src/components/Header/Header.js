@@ -30,9 +30,15 @@ export default function Header() {
       <HamburgerNavigation active={active}>
         {active ? (
           <NavigationList active={active}>
-            <ListItem><StyledLink to="/portfolio">Portfolio</StyledLink></ListItem>
-            <ListItem><StyledLink to="/about">About Us</StyledLink></ListItem>
-            <ListItem><StyledLink to="/contact">Contact</StyledLink></ListItem>
+            <ListItem>
+              <StyledLink to="/portfolio">Portfolio</StyledLink>
+            </ListItem>
+            <ListItem>
+              <StyledLink to="/about">About Us</StyledLink>
+            </ListItem>
+            <ListItem>
+              <StyledLink to="/contact">Contact</StyledLink>
+            </ListItem>
           </NavigationList>
         ) : null}
       </HamburgerNavigation>

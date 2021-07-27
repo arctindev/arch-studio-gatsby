@@ -1,6 +1,6 @@
 import React from "react"
 import { PortfolioWrapper } from "./PortfolioGallery.styles"
-import { portfolioGaleryData } from "./PortfolioGalleryData"
+import { portfolioGaleryData } from "../../data/PortfolioGalleryData/PortfolioGalleryData"
 import ItemWithImage from "../ItemWithImage/ItemWithImage"
 
 export default function PortfolioGallery() {

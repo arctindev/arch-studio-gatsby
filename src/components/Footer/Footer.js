@@ -5,7 +5,7 @@ import {
   FooterList,
   FooterWrapper,
   StyledLink,
-  StyledBrandingLink
+  StyledBrandingLink,
 } from "./Footer.styles"
 import Branding from "../../assets/branding/branding-white.inline.svg"
 import Button from "../Button/Button"

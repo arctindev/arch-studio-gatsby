@@ -1,4 +1,4 @@
-const mainColor = "#FFFFFF"
+const mainColor = "#ffffff"
 const firstColor = "#1b1d23"
 const secondColor = "#eeeff4"
 const thirdColor = "#7d828f"
@@ -12,7 +12,7 @@ export const dayTheme = {
     /* Buttons */
     buttonBG: firstColor,
     buttonFont: mainColor,
-    buttonHoverBG:forthColor,
+    buttonHoverBG: forthColor,
     /* Footer */
     footerMainBG: mainColor,
     footerBG: secondColor,
@@ -36,10 +36,19 @@ export const dayTheme = {
     landingArticleText: forthColor,
     /* LandingFeatured */
     landingFeaturedTitle: firstColor,
+    landingFeaturedBG: mainColor,
     /* LandingWhitespace */
     landingWhitespace: mainColor,
+    /* ------------- About Page -------------------- */
     /* AboutUsHero */
     aboutUsHeroBG: mainColor,
     aboutUsHeroDecoration: mainColor,
+    aboutUsHeroTitle: firstColor,
+    aboutUsHeroText: forthColor,
+    /* AboutUsArticle */
+    aboutUsArticleTitle: firstColor,
+    aboutUsArticleText: forthColor,
+    /* AboutUsLeaders */
+    aboutUsLeadersBG: mainColor,
   },
 }

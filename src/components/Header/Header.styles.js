@@ -31,12 +31,13 @@ export const HamburgerNavigation = styled.nav`
   opacity: 0.95;
   padding: ${({ active }) => (active ? "3rem" : "0px")};
 
-  transition: 0.4s all ease-in-out;
+  transition: 0.4s width ease-in-out, 0.4s height ease-in-out,
+    0.4s padding ease-in-out;
 `
 
 export const NavigationList = styled.div`
   display: ${({ active }) => (active ? "block" : "none")};
-  display:flex;
+  display: flex;
   flex-direction: column;
   animation: activeMenu 0.4s ease-in-out;
 `
@@ -53,7 +54,7 @@ export const StyledBrandingLink = styled(Link)`
 `
 
 export const StyledLink = styled(Link)`
-@keyframes activeMenu {
+  @keyframes activeMenu {
     0% {
       color: transparent;
     }

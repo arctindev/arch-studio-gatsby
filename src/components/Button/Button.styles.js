@@ -11,7 +11,8 @@ export const StyledButton = styled.button`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out,
+    filter 0.2s ease-in-out;
   & > span {
     font-size: 15px;
     line-height: 25px;

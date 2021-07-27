@@ -10,7 +10,7 @@ import {
 export default function LandingAboutUs() {
   return (
     <LandingAboutUsWrapper>
-      <MaskedImage/>
+      <MaskedImage />
       <InnerWrapper>
         <StyledTitle>Small team, big ideas</StyledTitle>
         <Button width="190px" textContent="About Us" linkDirection="/about" />
