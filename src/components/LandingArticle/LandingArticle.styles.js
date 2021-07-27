@@ -1,8 +1,14 @@
 import styled from "styled-components"
+
+export const NormalWrapper = styled.div`
+  margin-top: ${({height}) => height<720 ? "5rem" : "0"};
+  position: relative;
+`;
+
 export const FixedWrapper = styled.div`
   position: fixed;
   z-index: -5;
-  top: 7rem;
+  top: ${({width}) => width<700 ? (width-300)/30 : 20}vh;
 `;
 
 export const ArticleTitle = styled.h1`

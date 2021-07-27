@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const StyledWhiteSpace = styled.main`
+export const StyledWhitespace = styled.main`
   top: 10rem;
   content: "";
   width: 100%;
