@@ -26,6 +26,10 @@ export const dayTheme = {
     dropdownLinkColor: firstColor,
     /* ItemWithImage */
     itemWithImageText: mainColor,
+    /* ImageWithPerson */
+    imageWithPersonBG: mainColor,
+    imageWithPersonName: firstColor,
+    imageWithPersonJob: firstColor,
     /* ------------ Landing page ----------------- */
     /* Hero */
     heroFont: mainColor,

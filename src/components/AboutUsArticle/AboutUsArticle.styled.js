@@ -5,6 +5,7 @@ export const NormalWrapper = styled.div`
 `
 
 export const ArticleTitle = styled.h1`
+  width: 10%;
   line-height: 48px;
   font-size: 40px;
   letter-spacing: -1.43px;

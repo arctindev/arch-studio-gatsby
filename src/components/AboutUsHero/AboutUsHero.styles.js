@@ -27,7 +27,7 @@ export const AboutUsImage = styled.div`
   }
 `
 export const TextWrapper = styled.div`
-  padding: 3rem 6.5vw 6rem 6.5vw;
+  padding: 3rem 6.5vw 5rem 6.5vw;
 `
 export const AboutUsHeroTitle = styled.h1`
   position: relative;
