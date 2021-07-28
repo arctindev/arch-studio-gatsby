@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useContext, useEffect } from "react"
 import {
   HamburgerButton,
   HamburgerNavigation,
@@ -11,15 +11,28 @@ import {
 import Branding from "../../assets/branding/branding.inline.svg"
 import Hamburger from "../../assets/icons/hamburger.inline.svg"
 import HamburgerActive from "../../assets/icons/hamburger-active.inline.svg"
+import { ViewportContext } from "../../Providers/viewportManagment"
 
 export default function Header() {
   const [active, setActive] = useState(false)
+  const [scrollWatcher, setScrollWatcher] = useState(0)
+  const [scrollDirection, setScrollDirection] = useState(true)
+  const { scrollY } = useContext(ViewportContext)
+  useEffect(() => {
+    scrollY > scrollWatcher
+      ? setScrollDirection(false)
+      : setScrollDirection(true)
+
+    if (scrollDirection) setActive(false)
+
+    setScrollWatcher(scrollY)
+  }, [scrollY])
 
   const handleButtonClick = active => {
     setActive(() => !active)
   }
   return (
-    <StyledHeader>
+    <StyledHeader scrollDirection={scrollDirection}>
       <StyledBrandingLink to="/">
         <Branding />
       </StyledBrandingLink>

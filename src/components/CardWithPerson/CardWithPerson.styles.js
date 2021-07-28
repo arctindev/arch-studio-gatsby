@@ -10,10 +10,11 @@ export const CardWrapper = styled.div`
 export const PersonImage = styled.div`
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 0.9;
+  min-height: 300px;
   margin-bottom: 1.5rem;
   background: url(${({ image }) => image}) no-repeat;
   background-size: cover;
+  background-position: center;
   filter: contrast(110%) saturate(180%) grayscale(25%);
 `
 

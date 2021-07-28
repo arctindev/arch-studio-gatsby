@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import {
   ArticleText,
   ArticleTitle,
@@ -7,10 +7,10 @@ import {
 } from "./LandingArticle.styles"
 import ArticleWithDecoration from "../ArticleWithDecoration/ArticleWithDecoration"
 import { LandingArticleData } from "../../data/LandingData/LandingData"
-import { useViewport } from "../../Hooks/viewport"
+import { ViewportContext } from "../../Providers/viewportManagment"
 
 export default function LandingArticle() {
-  const { height, width } = useViewport()
+  const { height, width } = useContext(ViewportContext)
   if (height > 720) {
     return (
       <FixedWrapper width={width}>

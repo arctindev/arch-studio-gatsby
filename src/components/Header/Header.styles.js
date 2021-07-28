@@ -11,8 +11,11 @@ export const StyledHeader = styled.header`
   padding: 0 6.5vw;
   display: flex;
   align-items: center;
+  transform: ${({ scrollDirection }) =>
+    scrollDirection ? "translateY(0)" : "translateY(-6rem)"};
   justify-content: space-between;
   background-color: ${({ theme }) => theme.colors.headerBG};
+  transition: transform 0.3s ease-in-out;
 `
 
 export const HamburgerButton = styled.button`
