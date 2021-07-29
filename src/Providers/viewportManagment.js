@@ -11,6 +11,16 @@ export const ViewportProvider = ({ children }) => {
   const [height, setHeight] = useState()
   const [scrollY, setScrollY] = useState()
 
+  const throttle = (handler, wait) => {
+    let time = Date.now()
+    return () => {
+      if (time + wait - Date.now() < 0) {
+        handler()
+        time = Date.now()
+      }
+    }
+  }
+
   const handleWindowResize = () => {
     setWidth(window.innerWidth)
     setHeight(window.innerHeight)
@@ -18,15 +28,18 @@ export const ViewportProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    window.addEventListener("resize", handleWindowResize)
-    window.addEventListener("mousemove", handleWindowResize)
-    window.addEventListener("touchstart", handleWindowResize)
-    window.addEventListener("scroll", handleWindowResize)
+    window.addEventListener("resize", throttle(handleWindowResize, 500))
+    window.addEventListener("mousemove", throttle(handleWindowResize, 500))
+    window.addEventListener("touchstart", throttle(handleWindowResize, 500))
+    window.addEventListener("scroll", throttle(handleWindowResize, 500))
     return () => {
-      window.removeEventListener("resize", handleWindowResize)
-      window.removeEventListener("mousemove", handleWindowResize)
-      window.removeEventListener("touchstart", handleWindowResize)
-      window.removeEventListener("scroll", handleWindowResize)
+      window.removeEventListener("resize", throttle(handleWindowResize, 500))
+      window.removeEventListener("mousemove", throttle(handleWindowResize, 500))
+      window.removeEventListener(
+        "touchstart",
+        throttle(handleWindowResize, 500)
+      )
+      window.removeEventListener("scroll", throttle(handleWindowResize, 500))
     }
   }, [])
   return (

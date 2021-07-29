@@ -32,7 +32,7 @@ export default function Header() {
     setActive(() => !active)
   }
   return (
-    <StyledHeader scrollDirection={scrollDirection}>
+    <StyledHeader scrollDirection={scrollDirection} scrollY={scrollY}>
       <StyledBrandingLink to="/">
         <Branding />
       </StyledBrandingLink>

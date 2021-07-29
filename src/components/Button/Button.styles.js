@@ -27,7 +27,7 @@ export const StyledButton = styled.button`
 `
 
 export const StyledLink = styled(Link)`
-  color: ${({ theme }) => theme.colors.footerNavLink};
+  color: ${({ theme }) => theme.colors.buttonLink};
   width: ${({ width }) => width};
   text-decoration: none;
 `

@@ -3,6 +3,7 @@ const firstColor = "#1b1d23"
 const secondColor = "#eeeff4"
 const thirdColor = "#7d828f"
 const forthColor = "#60636d"
+const fifthColor = "#C8CCD8"
 
 export const dayTheme = {
   colors: {
@@ -13,6 +14,7 @@ export const dayTheme = {
     buttonBG: firstColor,
     buttonFont: mainColor,
     buttonHoverBG: forthColor,
+    buttonLink: thirdColor,
     /* Footer */
     footerMainBG: mainColor,
     footerBG: secondColor,
@@ -43,6 +45,8 @@ export const dayTheme = {
     landingFeaturedBG: mainColor,
     /* LandingWhitespace */
     landingWhitespace: mainColor,
+    /* ------------- Galery Page ------------------- */
+    portfolioGaleryBG: mainColor,
     /* ------------- About Page -------------------- */
     /* AboutUsHero */
     aboutUsHeroBG: mainColor,
@@ -54,5 +58,24 @@ export const dayTheme = {
     aboutUsArticleText: forthColor,
     /* AboutUsLeaders */
     aboutUsLeadersBG: mainColor,
+    /* -------------- Contact Page ------------------*/
+    /* ContactHero */
+    contactHeroBG: mainColor,
+    contactHeroDecoration: mainColor,
+    contactHeroTitle: firstColor,
+    contactHeroText: forthColor,
+    /* ContactDetails */
+    contactDetailsBG: mainColor,
+    contactDetailsTitle: firstColor,
+    contactDetailsText: forthColor,
+    contactButtonFont: firstColor,
+    contactButtonBG: mainColor,
+    contactButtonLink: mainColor,
+    /* ContactForm */
+    contactFormBG: mainColor,
+    contactFormTitle: firstColor,
+    contactFormPlaceholder: fifthColor,
+    contactFormText: firstColor,
+    contactFormBorder: firstColor,
   },
 }

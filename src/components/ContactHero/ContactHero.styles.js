@@ -1,13 +1,13 @@
 import styled from "styled-components"
-import image from "../../assets/images/about/aboutHeroImage.jpg"
+import image from "../../assets/images/contact/contactHeroImage.jpg"
 
-export const AboutUsHeroWrapper = styled.div`
+export const ContactHeroWrapper = styled.div`
   width: 100%;
   margin-top: 6rem;
-  background-color: ${({ theme }) => theme.colors.aboutUsHeroBG};
+  background-color: ${({ theme }) => theme.colors.contactHeroBG};
 `
 
-export const AboutUsImage = styled.div`
+export const ContactImage = styled.div`
   position: relative;
   background: url(${image}) no-repeat;
   background-size: cover;
@@ -29,10 +29,10 @@ export const AboutUsImage = styled.div`
 export const TextWrapper = styled.div`
   padding: 3rem 6.5vw 5rem 6.5vw;
 `
-export const AboutUsHeroTitle = styled.h1`
+export const ContactHeroTitle = styled.h1`
   position: relative;
   min-height: 115px;
-  color: ${({ theme }) => theme.colors.aboutUsHeroTitle};
+  color: ${({ theme }) => theme.colors.contactHeroTitle};
   line-height: 48px;
   font-size: 40px;
   font-weight: bold;
@@ -44,16 +44,16 @@ export const AboutUsHeroTitle = styled.h1`
     height: 3rem;
     filter: none;
     width: calc(100% + 6.5vw);
-    background-color: ${({ theme }) => theme.colors.aboutUsHeroDecoration};
+    background-color: ${({ theme }) => theme.colors.contactHeroDecoration};
     position: absolute;
     top: -6rem;
     left: -6.5vw;
   }
 `
 
-export const AboutUsHeroText = styled.p`
+export const ContactHeroText = styled.p`
   font-size: 15px;
   font-weight: 500;
   line-height: 25px;
-  color: ${({ theme }) => theme.colors.aboutUsHeroText};
+  color: ${({ theme }) => theme.colors.contactHeroText};
 `
