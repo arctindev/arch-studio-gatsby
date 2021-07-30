@@ -2,20 +2,21 @@ import styled from "styled-components"
 
 export const StyledForm = styled.form`
   position: relative;
-  padding: 0rem 6.5vw 6rem 6.5vw;
+  padding: ${({ width }) =>
+    width < 700 ? "0rem 6.5vw 6rem 6.5vw" : "0rem 12.5vw 12rem 12.5vw;"};
   background-color: ${({ theme }) => theme.colors.contactFormBG};
   display: flex;
   flex-direction: column;
 `
 
 export const FormTitle = styled.h1`
-  width: 10rem;
+  width: ${({ width }) => (width < 700 ? "10rem" : "30rem;")};
   line-height: 48px;
-  font-size: 40px;
+  font-size: ${({ width }) => (width < 700 ? "40px" : "56px")};
   letter-spacing: -1.43px;
   color: ${({ theme }) => theme.colors.contactFormTitle};
   margin-top: 0rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   text-align: left;
 `
 
@@ -26,8 +27,9 @@ export const StyledInput = styled.input`
   padding: 1rem 2rem 1.5rem 2rem;
   margin-bottom: 1rem;
   outline: none;
-  line-height: auto;
-  letter-spacing: -0.31 px;
+  line-height: 22.4px;
+  letter-spacing: -0.31px;
+  font-family: inherit;
   font-size: 20px;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.contactFormText};
@@ -43,14 +45,18 @@ export const StyledTextarea = styled.textarea`
   height: 7rem;
   padding: 1rem 2rem 1rem 2rem;
   outline: none;
-  line-height: auto;
-  letter-spacing: -0.31 px;
+  line-height: 22.4px;
+  letter-spacing: -0.31px;
   font-size: 20px;
+  font-family: inherit;
   font-weight: bold;
   resize: none;
   color: ${({ theme }) => theme.colors.contactFormText};
   ::placeholder {
     color: ${({ theme }) => theme.colors.contactFormPlaceholder};
+    font-size: inherit;
+    font-family: inherit;
+    letter-spacing: inherit;
   }
 `
 

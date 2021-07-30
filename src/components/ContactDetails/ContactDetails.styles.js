@@ -1,8 +1,8 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
 
 export const NormalWrapper = styled.div`
   position: relative;
+  width: 100%;
   background-color: ${({ theme }) => theme.colors.contactDetailsBG};
 `
 
@@ -29,7 +29,6 @@ export const DetailsSubtitle = styled.h2`
 export const DetailsWrapper = styled.div`
   line-height: 35px;
   font-size: 15px;
-  padding-bottom: 1rem;
 `
 
 export const DetailsText = styled.p`
@@ -62,8 +61,11 @@ export const StyledButton = styled.button`
     text-decoration: underline;
   }
 `
-export const StyledLink = styled(Link)`
-  color: ${({ theme }) => theme.colors.contactButtonLink};
-  width: ${({ width }) => width};
-  text-decoration: none;
+
+export const RwdWrapper = styled.div`
+  padding-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `

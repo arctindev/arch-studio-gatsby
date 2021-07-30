@@ -1,6 +1,12 @@
-import React from "react"
-import { StyledMap } from "./ContactMap.styles"
+import React, { useContext } from "react"
+import { StyledMap, MapWrapper } from "./ContactMap.styles"
+import { ViewportContext } from "../../Providers/viewportManagment"
 
 export default function ContactMap() {
-  return <StyledMap />
+  const { width } = useContext(ViewportContext)
+  return (
+    <MapWrapper width={width}>
+      <StyledMap />
+    </MapWrapper>
+  )
 }

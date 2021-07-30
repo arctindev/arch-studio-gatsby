@@ -5,15 +5,15 @@ export const FooterWrapper = styled.footer`
   position: relative;
   z-index: 0;
   background-color: ${({ theme }) => theme.colors.footerMainBG};
-  height: 440px;
+  height: ${({ width }) => (width < 700 ? "440px" : "120px")};
   width: inherit;
   &:before {
     z-index: -1;
     content: "";
     position: absolute;
-    width: 100%;
-    height: ${() => {
-      return 440 - 60
+    width: ${({ width }) => (width < 700 ? "100%" : "calc(100% - 156px)")};
+    height: ${({ width }) => {
+      return width < 700 ? 380 : 120
     }}px;
     background-color: ${({ theme }) => theme.colors.footerBG};
     bottom: 0;
@@ -26,15 +26,16 @@ export const FooterContent = styled.div`
   height: inherit;
   width: inherit;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: ${({ width }) => (width < 700 ? "column" : "row")};
+  justify-content: ${({ width }) =>
+    width < 700 ? "flex-start" : "space-between"};
   align-items: center;
 `
 
 export const StyledBrandingLink = styled(Link)`
   cursor: pointer;
   text-decoration: none;
-  margin-bottom: 2rem;
+  margin-bottom: ${({ width }) => (width < 700 ? "2.5rem" : "0")};
 `
 
 export const BrandingWrapper = styled.div`
@@ -45,15 +46,21 @@ export const BrandingWrapper = styled.div`
   justify-content: center;
   align-items: center;
 `
-
+export const FooterWhitespace = styled.div`
+  display: ${({ width }) => (width < 700 ? "none" : "block")};
+  background-color: transparent;
+  flex: 1;
+`
 export const FooterList = styled.div`
-  width: inherit;
-  height: 140px;
+  width: auto;
+  height: auto;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex: ${({ width }) => (width < 700 ? "0" : "20")};
+  flex-direction: ${({ width }) => (width < 700 ? "column" : "row")};
+  justify-content: space-evenly;
+  justify-self: flex-start;
+  max-width: 500px;
   align-items: center;
-  margin-bottom: 2rem;
 `
 
 export const StyledLink = styled(Link)`
@@ -61,6 +68,7 @@ export const StyledLink = styled(Link)`
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
+  margin-bottom: ${({ width }) => (width < 700 ? "2.5rem" : "0")};
   transition: color 0.2s ease-in-out;
   &:hover {
     color: ${({ theme }) => theme.colors.footerNavLinkHover};
