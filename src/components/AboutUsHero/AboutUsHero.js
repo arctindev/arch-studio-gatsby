@@ -5,6 +5,7 @@ import {
   AboutUsHeroTitle,
   TextWrapper,
   AboutUsHeroText,
+  PageDecoration,
 } from "./AboutUsHero.styles"
 
 export default function AboutUsHero() {
@@ -12,6 +13,7 @@ export default function AboutUsHero() {
     <AboutUsHeroWrapper>
       <AboutUsImage />
       <TextWrapper>
+        <PageDecoration>About</PageDecoration>
         <AboutUsHeroTitle>Your team of professionals</AboutUsHeroTitle>
         <AboutUsHeroText>
           Our small team of world-class professionals will work with you every

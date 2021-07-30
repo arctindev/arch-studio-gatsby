@@ -7,14 +7,18 @@ export const NormalWrapper = styled.div`
 `
 
 export const DetailsTitle = styled.h1`
-  width: ${({width}) => width < 700 ? '10%' : '100%'};
+  width: 10%;
   line-height: 48px;
-  font-size: ${({width}) => width < 700 ? '40px' : '56px'};
+  font-size: 40px;
   letter-spacing: -1.43px;
   color: ${({ theme }) => theme.colors.contactDetailsTitle};
   margin-top: 4.5rem;
   margin-bottom: 4rem;
   text-align: left;
+  @media only screen and (min-width: 700px) {
+    font-size: 56px;
+    width: 100%;
+  }
 `
 
 export const DetailsSubtitle = styled.h2`
@@ -66,7 +70,12 @@ export const RwdWrapper = styled.div`
   padding-bottom: 1rem;
   width: 100%;
   display: flex;
-  flex-direction: ${({width}) => width < 700 ? 'column' : 'row'};
-  justify-content: ${({width}) => width < 700 ? 'flex-start' : 'space-between'};
-  align-items: ${({width}) => width < 700 ? 'flex-start' : 'center'};
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-flex-start;
+  @media only screen and (min-width: 700px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 `

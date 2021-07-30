@@ -5,19 +5,24 @@ export const FooterWrapper = styled.footer`
   position: relative;
   z-index: 0;
   background-color: ${({ theme }) => theme.colors.footerMainBG};
-  height: ${({ width }) => (width < 700 ? "440px" : "120px")};
+  height: 440px;
   width: inherit;
+  @media only screen and (min-width: 700px) {
+    height: 120px;
+  }
   &:before {
     z-index: -1;
     content: "";
     position: absolute;
-    width: ${({ width }) => (width < 700 ? "100%" : "calc(100% - 156px)")};
-    height: ${({ width }) => {
-      return width < 700 ? 380 : 120
-    }}px;
+    width: 100%;
+    height: 380px;
     background-color: ${({ theme }) => theme.colors.footerBG};
     bottom: 0;
     left: 0;
+    @media only screen and (min-width: 700px) {
+      height: 120px;
+      width: calc(100% - 156px);
+    }
   }
 `
 
@@ -26,16 +31,22 @@ export const FooterContent = styled.div`
   height: inherit;
   width: inherit;
   display: flex;
-  flex-direction: ${({ width }) => (width < 700 ? "column" : "row")};
-  justify-content: ${({ width }) =>
-    width < 700 ? "flex-start" : "space-between"};
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  @media only screen and (min-width: 700px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `
 
 export const StyledBrandingLink = styled(Link)`
   cursor: pointer;
   text-decoration: none;
-  margin-bottom: ${({ width }) => (width < 700 ? "2.5rem" : "0")};
+  margin-bottom: 2.5rem;
+  @media only screen and (min-width: 700px) {
+    margin-bottom: 0;
+  }
 `
 
 export const BrandingWrapper = styled.div`
@@ -47,20 +58,27 @@ export const BrandingWrapper = styled.div`
   align-items: center;
 `
 export const FooterWhitespace = styled.div`
-  display: ${({ width }) => (width < 700 ? "none" : "block")};
+  display: none;
   background-color: transparent;
   flex: 1;
+  @media only screen and (min-width: 700px) {
+    display: block;
+  }
 `
 export const FooterList = styled.div`
   width: auto;
   height: auto;
   display: flex;
-  flex: ${({ width }) => (width < 700 ? "0" : "20")};
-  flex-direction: ${({ width }) => (width < 700 ? "column" : "row")};
+  flex: 0;
+  flex-direction: column;
   justify-content: space-evenly;
   justify-self: flex-start;
   max-width: 500px;
   align-items: center;
+  @media only screen and (min-width: 700px) {
+    flex: 20;
+    flex-direction: row;
+  } ;
 `
 
 export const StyledLink = styled(Link)`
@@ -68,9 +86,12 @@ export const StyledLink = styled(Link)`
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
-  margin-bottom: ${({ width }) => (width < 700 ? "2.5rem" : "0")};
+  margin-bottom: 2.5rem;
   transition: color 0.2s ease-in-out;
   &:hover {
     color: ${({ theme }) => theme.colors.footerNavLinkHover};
+  }
+  @media only screen and (min-width: 700px) {
+    margin-bottom: 0;
   }
 `

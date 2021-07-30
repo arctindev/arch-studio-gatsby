@@ -13,27 +13,27 @@ import Button from "../Button/Button"
 import { ViewportContext } from "../../Providers/viewportManagment"
 
 export default function Footer() {
-  const { width } = useContext(ViewportContext)
+  const { tablet } = useContext(ViewportContext)
   return (
-    <FooterWrapper width={width}>
-      <FooterContent width={width}>
-        <StyledBrandingLink width={width} to="/">
-          <BrandingWrapper width={width}>
+    <FooterWrapper tablet={tablet}>
+      <FooterContent tablet={tablet}>
+        <StyledBrandingLink tablet={tablet} to="/">
+          <BrandingWrapper tablet={tablet}>
             <Branding />
           </BrandingWrapper>
         </StyledBrandingLink>
-        <FooterList width={width}>
-          <StyledLink width={width} to="/portfolio">
+        <FooterList tablet={tablet}>
+          <StyledLink tablet={tablet} to="/portfolio">
             Portfolio
           </StyledLink>
-          <StyledLink width={width} to="/about">
+          <StyledLink tablet={tablet} to="/about">
             About Us
           </StyledLink>
-          <StyledLink width={width} to="/contact">
+          <StyledLink tablet={tablet} to="/contact">
             Contact
           </StyledLink>
         </FooterList>
-        {width < 700 ? null : <FooterWhitespace />}
+        <FooterWhitespace />
         <Button
           width="250px"
           textContent="See Our Portfolio"

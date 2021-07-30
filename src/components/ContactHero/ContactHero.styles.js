@@ -7,19 +7,25 @@ export const ContactHeroWrapper = styled.div`
   width: 100%;
   margin-top: 6rem;
   background-color: ${({ theme }) => theme.colors.contactHeroBG};
-  padding: ${({ width }) => (width < 700 ? "none" : "0rem 12.5vw 0rem 12.5vw")};
-  margin-bottom: ${({ width }) => (width < 700 ? "0" : "15rem")};
+  padding: none;
+  margin-bottom: 0;
+  @media only screen and (min-width: 700px) {
+    padding: 0rem 12.5vw 0rem 12.5vw;
+    margin-bottom: 15rem;
+  }
 `
 
 export const ContactImage = styled.div`
   position: relative;
-  background: ${({ width }) =>
-      width < 700 ? `url(${image})` : `url(${bigImage})`}
-    no-repeat;
+  background: url(${image}) no-repeat;
   background-size: cover;
   width: 100%;
-  height: ${({ width }) => (width < 700 ? "240px" : "720px")};
+  height: 240px;
   filter: contrast(110%) saturate(190%);
+  @media only screen and (min-width: 700px) {
+    height: 720px;
+    background: url(${bigImage}) no-repeat;
+  }
   &:before {
     z-index: 0;
     content: "";
@@ -34,15 +40,21 @@ export const ContactImage = styled.div`
 `
 export const TextWrapper = styled.div`
   z-index: 1;
-  position: ${({ width }) => (width < 700 ? "relative" : "absolute")};
-  bottom: ${({ width }) => (width < 700 ? "0" : "-5rem")};
-  right: ${({ width }) => (width < 700 ? "auto" : "0")};
-  width: ${({ width }) => (width < 700 ? "auto" : "calc(100% - 18.5vw)")};
-  padding: ${({ width }) =>
-    width < 700 ? "3rem 6.5vw 5rem 6.5vw" : "3rem 12.5vw 5rem 6.5vw"};
+  position: relative;
+  bottom: 0;
+  right: auto;
+  width: auto;
+  padding: 3rem 6.5vw 5rem 6.5vw;
   background-color: ${({ theme }) => theme.colors.contactHeroDecoration};
+  @media only screen and (min-width: 700px) {
+    position: absolute;
+    bottom: -5rem;
+    right: 0;
+    width: calc(100% - 18.5vw);
+    padding: 3rem 12.5vw 5rem 6.5vw;
+  }
   &:before {
-    display: ${({ width }) => (width < 700 ? "none" : "block")};
+    display: none;
     z-index: 2;
     content: "";
     position: absolute;
@@ -51,20 +63,26 @@ export const TextWrapper = styled.div`
     background-color: #c8ccd8;
     top: 6rem;
     left: 6.5vw;
+    @media only screen and (min-width: 700px) {
+      display: block;
+    }
   }
 `
 export const ContactHeroTitle = styled.h1`
   position: relative;
   min-height: 115px;
-  color: ${({ width, theme }) =>
-    width < 700 ? "transparent" : theme.colors.contactHeroTitle};
+  color: transparent;
   line-height: 48px;
-  font-size: ${({ width }) => (width < 700 ? "40px" : "56px")};
-  width: ${({ width }) => (width < 700 ? "auto" : "auto")};
-  margin: ${({ width }) => (width < 700 ? 0 : "9rem 0 2rem 0")};
+  font-size: 40px;
+  margin: 0;
   font-weight: bold;
   letter-spacing: -1px;
   padding-bottom: 1rem;
+  @media only screen and (min-width: 700px) {
+    color: ${({ theme }) => theme.colors.contactHeroTitle};
+    font-size: 56px;
+    margin: 9rem 0 2rem 0;
+  }
   &:after {
     z-index: 1;
     content: "";
@@ -87,11 +105,14 @@ export const ContactHeroText = styled.p`
 
 export const PageDecoration = styled.span`
   position: absolute;
-  display: ${({ width }) => (width < 700 ? "none" : "block")};
+  display: none;
   z-index: 3;
   font-size: 120px;
   font-weight: bold;
   color: #eeeff4;
   top: -4.5rem;
   right: 12.5vw;
+  @media only screen and (min-width: 700px) {
+    display: block;
+  }
 `

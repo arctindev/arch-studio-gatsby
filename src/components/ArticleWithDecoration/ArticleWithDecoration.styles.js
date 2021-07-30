@@ -8,9 +8,11 @@ export const StyledWrapper = styled.main`
   justify-content: flex-start;
   align-items: flex-start;
   text-align: left;
-  padding: ${({ width }) =>
-    width < 700 ? "0rem 6.5vw 0rem 6.5vw" : "0rem 12.5vw 0rem 12.5vw;"};
-  margin-bottom: 7rem;
+  padding: 0rem 6.5vw 0rem 6.5vw;
+  margin-bottom: 5rem;
+  @media only screen and (min-width: 700px) {
+    padding: 0rem 12.5vw 0rem 12.5vw;
+  }
   &:before {
     content: "";
     position: absolute;
@@ -18,6 +20,9 @@ export const StyledWrapper = styled.main`
     width: 4rem;
     background-color: #c8ccd8;
     top: 0;
-    left: ${({ width }) => (width < 700 ? "6.5vw" : "12.5vw")};
+    left: 6.5vw;
+    @media only screen and (min-width: 700px) {
+      left: 12.5vw;
+    }
   }
 `

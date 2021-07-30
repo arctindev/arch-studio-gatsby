@@ -8,9 +8,9 @@ export default function HTML(props) {
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
-    name="viewport"
-   content="viewport-fit=cover, width=device-width,   initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-  />
+          name="viewport"
+          content="viewport-fit=cover, width=device-width,   initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>

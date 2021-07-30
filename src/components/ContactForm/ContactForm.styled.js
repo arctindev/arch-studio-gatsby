@@ -2,22 +2,28 @@ import styled from "styled-components"
 
 export const StyledForm = styled.form`
   position: relative;
-  padding: ${({ width }) =>
-    width < 700 ? "0rem 6.5vw 6rem 6.5vw" : "0rem 12.5vw 15rem 12.5vw;"};
+  padding: 0rem 6.5vw 6rem 6.5vw;
   background-color: ${({ theme }) => theme.colors.contactFormBG};
   display: flex;
   flex-direction: column;
+  @media only screen and (min-width: 700px) {
+    padding: 0rem 12.5vw 15rem 12.5vw;
+  }
 `
 
 export const FormTitle = styled.h1`
-  width: ${({ width }) => (width < 700 ? "10rem" : "30rem;")};
+  width: 10rem;
   line-height: 48px;
-  font-size: ${({ width }) => (width < 700 ? "40px" : "56px")};
+  font-size: 40px;
   letter-spacing: -1.43px;
   color: ${({ theme }) => theme.colors.contactFormTitle};
   margin-top: 0rem;
   margin-bottom: 2rem;
   text-align: left;
+  @media only screen and (min-width: 700px) {
+    width: 30rem;
+    font-size: 56px;
+  }
 `
 
 export const StyledInput = styled.input`
