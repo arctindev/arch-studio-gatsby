@@ -8,7 +8,7 @@ export const ContactHeroWrapper = styled.div`
   margin-top: 6rem;
   background-color: ${({ theme }) => theme.colors.contactHeroBG};
   padding: ${({ width }) => (width < 700 ? "none" : "0rem 12.5vw 0rem 12.5vw")};
-  margin-bottom: ${({ width }) => (width < 700 ? "0" : "12rem")};
+  margin-bottom: ${({ width }) => (width < 700 ? "0" : "15rem")};
 `
 
 export const ContactImage = styled.div`

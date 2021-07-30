@@ -7,6 +7,8 @@ import LandingAboutUs from "../components/LandingAboutUs/LandingAboutUs"
 import LandingFeatured from "../components/LandingFeatured/LandingFeatured"
 
 export default function Home() {
+  
+  
   return (
     <MainTemplate>
       <Hero />

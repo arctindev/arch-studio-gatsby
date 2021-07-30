@@ -7,9 +7,9 @@ export const ViewportContext = React.createContext({
 })
 
 export const ViewportProvider = ({ children }) => {
-  const [width, setWidth] = useState(0)
-  const [height, setHeight] = useState(0)
-  const [scrollY, setScrollY] = useState(0)
+  const [width, setWidth] = useState('')
+  const [height, setHeight] = useState('')
+  const [scrollY, setScrollY] = useState('')
 
   const throttle = (handler, wait) => {
     let time = Date.now()
@@ -20,33 +20,33 @@ export const ViewportProvider = ({ children }) => {
       }
     }
   }
-
   const handleWindowResize = () => {
     setWidth(window.innerWidth)
     setHeight(window.innerHeight)
     setScrollY(window.pageYOffset)
   }
-
+  
   useEffect(() => {
-    window.addEventListener("resize", throttle(handleWindowResize, 500))
-    window.addEventListener("mousemove", throttle(handleWindowResize, 500))
-    window.addEventListener("touchstart", throttle(handleWindowResize, 500))
-    window.addEventListener("scroll", throttle(handleWindowResize, 500))
+    
+    window.addEventListener("resize", throttle(handleWindowResize, 5))
+    window.addEventListener("mousemove", throttle(handleWindowResize, 5))
+    window.addEventListener("touchstart", throttle(handleWindowResize, 5))
+    window.addEventListener("scroll", throttle(handleWindowResize, 5))
     return () => {
-      window.removeEventListener("resize", throttle(handleWindowResize, 500))
-      window.removeEventListener("mousemove", throttle(handleWindowResize, 500))
+      window.removeEventListener("resize", throttle(handleWindowResize, 5))
+      window.removeEventListener("mousemove", throttle(handleWindowResize, 5))
       window.removeEventListener(
         "touchstart",
-        throttle(handleWindowResize, 500)
+        throttle(handleWindowResize, 5)
       )
-      window.removeEventListener("scroll", throttle(handleWindowResize, 500))
+      window.removeEventListener("scroll", throttle(handleWindowResize, 5))
     }
   }, [])
   return (
-    <ViewportContext.Provider value={{ scrollY, width, height }}>
+    <ViewportContext.Provider value={{handleWindowResize, scrollY, width, height }}>
       {children}
     </ViewportContext.Provider>
   )
 }
 
-export default ViewportProvider
+export default ViewportProvider;

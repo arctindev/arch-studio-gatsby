@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import image from "../../assets/images/contact/contactMap.jpg"
 export const MapWrapper = styled.div`
-  padding: ${({ width }) => (width < 700 ? "0" : "6rem 12.5vw 12rem 12.5vw")};
+  padding: ${({ width }) => (width < 700 ? "0" : "10rem 12.5vw 10rem 12.5vw")};
 `
 export const StyledMap = styled.div`
   position: relative;

@@ -10,7 +10,9 @@ import {
 import { ViewportContext } from "../../Providers/viewportManagment"
 
 export default function ContactHero() {
-  const { width } = useContext(ViewportContext)
+    
+    const {width} = useContext(ViewportContext)
+    
   return (
     <ContactHeroWrapper width={width}>
       <ContactImage width={width} />

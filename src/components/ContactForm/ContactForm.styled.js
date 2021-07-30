@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const StyledForm = styled.form`
   position: relative;
   padding: ${({ width }) =>
-    width < 700 ? "0rem 6.5vw 6rem 6.5vw" : "0rem 12.5vw 12rem 12.5vw;"};
+    width < 700 ? "0rem 6.5vw 6rem 6.5vw" : "0rem 12.5vw 15rem 12.5vw;"};
   background-color: ${({ theme }) => theme.colors.contactFormBG};
   display: flex;
   flex-direction: column;

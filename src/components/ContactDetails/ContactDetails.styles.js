@@ -7,13 +7,13 @@ export const NormalWrapper = styled.div`
 `
 
 export const DetailsTitle = styled.h1`
-  width: 10%;
+  width: ${({width}) => width < 700 ? '10%' : '100%'};
   line-height: 48px;
-  font-size: 40px;
+  font-size: ${({width}) => width < 700 ? '40px' : '56px'};
   letter-spacing: -1.43px;
   color: ${({ theme }) => theme.colors.contactDetailsTitle};
   margin-top: 4.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   text-align: left;
 `
 
@@ -66,6 +66,7 @@ export const RwdWrapper = styled.div`
   padding-bottom: 1rem;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: ${({width}) => width < 700 ? 'column' : 'row'};
+  justify-content: ${({width}) => width < 700 ? 'flex-start' : 'space-between'};
+  align-items: ${({width}) => width < 700 ? 'flex-start' : 'center'};
 `

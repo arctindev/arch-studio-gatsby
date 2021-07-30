@@ -17,9 +17,9 @@ export default function ContactDetails() {
   return (
     <NormalWrapper>
       <ArticleWithDecoration>
-        <DetailsTitle>Contact Details</DetailsTitle>
+        <DetailsTitle width={width}>Contact Details</DetailsTitle>
         <DetailsSubtitle>Main Office</DetailsSubtitle>
-        <RwdWrapper>
+        <RwdWrapper width={width}>
           <DetailsWrapper>
             <DetailsText>Mail : archone@mail.com</DetailsText>
             <DetailsText>Address : 1892 Chenoweth Drive TN</DetailsText>
@@ -31,7 +31,7 @@ export default function ContactDetails() {
           </StyledButton>
         </RwdWrapper>
         <DetailsSubtitle>Office II</DetailsSubtitle>
-        <RwdWrapper>
+        <RwdWrapper width={width}>
           <DetailsWrapper>
             <DetailsText>Mail : archtwo@mail.com</DetailsText>
             <DetailsText>Address : 3399 Wines Lane TX</DetailsText>
