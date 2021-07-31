@@ -6,8 +6,9 @@ import LandingAboutUs from "../components/LandingAboutUs/LandingAboutUs"
 import LandingFeatured from "../components/LandingFeatured/LandingFeatured"
 
 export default function Home() {
+  const onPage = "home"
   return (
-    <MainTemplate>
+    <MainTemplate onPage={onPage}>
       <Hero />
       <LandingArticle />
       <LandingAboutUs />

@@ -9,6 +9,7 @@ export const RWDWrapper = styled.div`
   }
 `
 export const StyledHero = styled.div`
+  position: relative;
   width: 100%;
   height: 560px;
   padding: 0vh 6.5vw 0 6.5vw;
@@ -28,13 +29,10 @@ export const StyledHero = styled.div`
     width: inherit;
     height: inherit;
     background-image: linear-gradient(to bottom right, black, transparent);
+    background-size: cover;
     top: 0;
     left: 0;
     opacity: 0.5;
-  }
-  @media only screen and (min-width: 700px) {
-    height: 720px;
-    padding-top: 10rem;
   }
 `
 

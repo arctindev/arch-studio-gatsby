@@ -6,8 +6,9 @@ import ContactMap from "../components/ContactMap/ContactMap"
 import ContactForm from "../components/ContactForm/ContactForm"
 
 export default function about() {
+  const onPage = "contact"
   return (
-    <MainTemplate>
+    <MainTemplate onPage={onPage}>
       <ContactHero />
       <ContactDetails />
       <ContactMap />

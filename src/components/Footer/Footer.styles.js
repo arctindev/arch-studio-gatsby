@@ -6,9 +6,13 @@ export const FooterWrapper = styled.footer`
   z-index: 0;
   background-color: ${({ theme }) => theme.colors.footerMainBG};
   height: 440px;
-  width: inherit;
+  width: 100%;
   @media only screen and (min-width: 700px) {
     height: 120px;
+  }
+  @media only screen and (min-width: 1120px) {
+    width: calc(100% - 12.5vw);
+    margin: 0 12.5vw 0 12.5vw;
   }
   &:before {
     z-index: -1;
@@ -22,6 +26,10 @@ export const FooterWrapper = styled.footer`
     @media only screen and (min-width: 700px) {
       height: 120px;
       width: calc(100% - 156px);
+    }
+    @media only screen and (min-width: 1120px) {
+      height: 120px;
+      width: calc(100% - 156px - 12.5vw);
     }
   }
 `
@@ -82,7 +90,10 @@ export const FooterList = styled.div`
 `
 
 export const StyledLink = styled(Link)`
-  color: ${({ theme }) => theme.colors.footerNavLink};
+  color: ${({ theme, onPage, value }) =>
+    value === onPage
+      ? theme.colors.footerNavLinkHover
+      : theme.colors.footerNavLink};
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;

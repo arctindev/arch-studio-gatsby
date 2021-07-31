@@ -23,6 +23,8 @@ export const dayTheme = {
     footerNavLinkHover: firstColor,
     /* Header */
     headerBG: mainColor,
+    headerNavLink: thirdColor,
+    headerNavLinkHover: firstColor,
     /* Nav Dropdown */
     dropdownBG: secondColor,
     dropdownLinkColor: firstColor,

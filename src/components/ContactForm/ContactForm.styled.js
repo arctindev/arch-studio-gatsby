@@ -9,6 +9,18 @@ export const StyledForm = styled.form`
   @media only screen and (min-width: 700px) {
     padding: 0rem 12.5vw 12rem 12.5vw;
   }
+  @media only screen and (min-width: 1120px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`
+export const RWDFormWrapper = styled.form`
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  @media only screen and (min-width: 1120px) {
+    width: 60%;
+  }
 `
 
 export const FormTitle = styled.h1`
@@ -23,6 +35,9 @@ export const FormTitle = styled.h1`
   @media only screen and (min-width: 700px) {
     width: 30rem;
     font-size: 56px;
+  }
+  @media only screen and (min-width: 1120px) {
+    width: 20rem;
   }
 `
 

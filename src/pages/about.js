@@ -5,8 +5,9 @@ import MainTemplate from "../Template/MainTemplate"
 import AboutUsLeaders from "../components/AboutUsLeaders/AboutUsLeaders"
 
 export default function about() {
+  const onPage = "about us"
   return (
-    <MainTemplate>
+    <MainTemplate onPage={onPage}>
       <AboutUsHero />
       <AboutUsArticle />
       <AboutUsLeaders />

@@ -16,11 +16,10 @@ export const NormalWrapper = styled.div`
       display: none;
       left: 12.5vw;
     }
-    
   }
   @media only screen and (min-width: 700px) {
-      margin-top:11rem;
-    }
+    margin-top: 11rem;
+  }
 `
 
 export const ArticleTitle = styled.h1`

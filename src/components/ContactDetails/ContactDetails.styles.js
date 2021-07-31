@@ -33,6 +33,10 @@ export const DetailsTitle = styled.h1`
     letter-spacing: -2px;
     width: 100%;
   }
+  @media only screen and (min-width: 1120px) {
+    width: 25rem;
+    margin-top: 0rem;
+  }
 `
 
 export const DetailsSubtitle = styled.h2`
@@ -79,17 +83,33 @@ export const StyledButton = styled.button`
     text-decoration: underline;
   }
 `
+export const DesktopWrapper = styled.div`
+  display: block;
+  width: 100%;
+  @media only screen and (min-width: 1120px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 4.5rem;
+  }
+`
 
 export const RwdWrapper = styled.div`
   padding-bottom: 2rem;
   width: 100%;
+  min-width: 275px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-flex-start;
+  align-items: flex-start;
   @media only screen and (min-width: 700px) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+  @media only screen and (min-width: 1120px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 `

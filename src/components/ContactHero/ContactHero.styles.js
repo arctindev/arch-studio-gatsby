@@ -5,7 +5,7 @@ import bigImage from "../../assets/images/contact/contactHeroImageBig.jpg"
 export const ContactHeroWrapper = styled.div`
   position: relative;
   width: 100%;
-  margin-top: 7rem;
+  margin-top: 6rem;
   background-color: ${({ theme }) => theme.colors.contactHeroBG};
   padding: none;
   margin-bottom: 0;
@@ -27,11 +27,16 @@ export const ContactImage = styled.div`
     background: url(${bigImage}) no-repeat;
     background-size: cover;
   }
+  @media only screen and (min-width: 1120px) {
+    background: url(${bigImage}) no-repeat;
+    background-size: cover;
+    width: 70%;
+  }
   &:before {
     z-index: 0;
     content: "";
     height: inherit;
-    width: inherit;
+    width: 100%;
     background-color: black;
     position: absolute;
     opacity: 0.4;
@@ -53,6 +58,9 @@ export const TextWrapper = styled.div`
     right: 0;
     width: calc(100% - 18.5vw);
     padding: 3rem 12.5vw 5rem 6.5vw;
+  }
+  @media only screen and (min-width: 1120px) {
+    width: calc(70% - 18.5vw);
   }
   &:before {
     display: none;
@@ -118,5 +126,9 @@ export const PageDecoration = styled.span`
   right: 12.5vw;
   @media only screen and (min-width: 700px) {
     display: block;
+  }
+  @media only screen and (min-width: 1400px) {
+    font-size: 200px;
+    top: -8rem;
   }
 `

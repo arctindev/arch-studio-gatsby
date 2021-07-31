@@ -6,6 +6,7 @@ import {
   StyledTextarea,
   StyledSubmit,
   SubmitWrapper,
+  RWDFormWrapper,
 } from "./ContactForm.styled"
 import ButtonArrow from "../../assets/icons/button-arrow.inline.svg"
 
@@ -17,13 +18,15 @@ export default function ContactForm() {
   return (
     <StyledForm>
       <FormTitle>Connect with us</FormTitle>
-      <StyledInput type="text" placeholder="Name" />
-      <StyledInput type="email" placeholder="Email" />
-      <StyledTextarea placeholder="Message" />
-      <SubmitWrapper>
-        <StyledSubmit onClick={handleSubmitClick} type="submit" value="" />
-        <ButtonArrow onClick={handleSubmitClick} />
-      </SubmitWrapper>
+      <RWDFormWrapper>
+        <StyledInput type="text" placeholder="Name" />
+        <StyledInput type="email" placeholder="Email" />
+        <StyledTextarea placeholder="Message" />
+        <SubmitWrapper>
+          <StyledSubmit onClick={handleSubmitClick} type="submit" value="" />
+          <ButtonArrow onClick={handleSubmitClick} />
+        </SubmitWrapper>
+      </RWDFormWrapper>
     </StyledForm>
   )
 }

@@ -15,7 +15,7 @@ export default function LandingFeatured() {
       <StyledTitle>Featured</StyledTitle>
       {LandingFeaturedData.map((item, index) => {
         return (
-          <ItemWrapper>
+          <ItemWrapper key={index}>
             <ItemWithImage
               key={index}
               image={item.image}

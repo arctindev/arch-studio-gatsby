@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React from "react"
 import {
   BrandingWrapper,
   FooterContent,
@@ -10,26 +10,24 @@ import {
 } from "./Footer.styles"
 import Branding from "../../assets/branding/branding-white.inline.svg"
 import Button from "../Button/Button"
-import { ViewportContext } from "../../Providers/viewportManagment"
 
-export default function Footer() {
-  const { tablet } = useContext(ViewportContext)
+export default function Footer({ onPage }) {
   return (
-    <FooterWrapper tablet={tablet}>
-      <FooterContent tablet={tablet}>
-        <StyledBrandingLink tablet={tablet} to="/">
-          <BrandingWrapper tablet={tablet}>
+    <FooterWrapper>
+      <FooterContent>
+        <StyledBrandingLink to="/">
+          <BrandingWrapper>
             <Branding />
           </BrandingWrapper>
         </StyledBrandingLink>
-        <FooterList tablet={tablet}>
-          <StyledLink tablet={tablet} to="/portfolio">
+        <FooterList>
+          <StyledLink value={"portfolio"} onPage={onPage} to="/portfolio">
             Portfolio
           </StyledLink>
-          <StyledLink tablet={tablet} to="/about">
+          <StyledLink value={"about us"} onPage={onPage} to="/about">
             About Us
           </StyledLink>
-          <StyledLink tablet={tablet} to="/contact">
+          <StyledLink value={"contact"} onPage={onPage} to="/contact">
             Contact
           </StyledLink>
         </FooterList>
