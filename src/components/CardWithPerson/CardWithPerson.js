@@ -13,7 +13,9 @@ import {
 export default function CardWithPerson({ image, name, job }) {
   return (
     <CardWrapper>
-      <PersonImage image={image} />
+      <PersonImage>
+        <img src={image} />
+      </PersonImage>
       <PersonName>{name}</PersonName>
       <PersonJob>{job}</PersonJob>
       <Icons>

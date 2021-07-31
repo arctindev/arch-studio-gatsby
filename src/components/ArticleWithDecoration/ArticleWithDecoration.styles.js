@@ -13,16 +13,4 @@ export const StyledWrapper = styled.main`
   @media only screen and (min-width: 700px) {
     padding: 0rem 12.5vw 0rem 12.5vw;
   }
-  &:before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 4rem;
-    background-color: #c8ccd8;
-    top: 0;
-    left: 6.5vw;
-    @media only screen and (min-width: 700px) {
-      left: 12.5vw;
-    }
-  }
 `

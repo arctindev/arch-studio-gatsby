@@ -1,6 +1,13 @@
 import styled from "styled-components"
 import image from "../../assets/images/landing/landing-about-us-image.jpg"
 
+export const RWDWrapper = styled.div`
+  width: 100%;
+  @media only screen and (min-width: 700px) {
+    padding: 4rem 12.5vw 7rem 12.5vw;
+  }
+`
+
 export const LandingAboutUsWrapper = styled.div`
   position: relative;
   width: 100%;
@@ -19,6 +26,7 @@ export const MaskedImage = styled.div`
   height: inherit;
   background: url(${image}) no-repeat;
   background-size: cover;
+  background-position: 50% 70%;
   filter: contrast(120%) saturate(160%) grayscale(15%);
   &:after {
     z-index: 1;
@@ -49,4 +57,11 @@ export const StyledTitle = styled.h2`
   line-height: 48px;
   letter-spacing: -1.2px;
   margin-bottom: 2rem;
+  width: 20rem;
+  @media only screen and (min-width: 700px) {
+    width: 25rem;
+    font-size: 56px;
+    letter-spacing: -2px;
+    line-height: 56px;
+  }
 `

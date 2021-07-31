@@ -3,7 +3,7 @@ import image from "../../assets/images/contact/contactMap.jpg"
 export const MapWrapper = styled.div`
   padding: 0;
   @media only screen and (min-width: 700px) {
-    padding: 15rem 12.5vw 10rem 12.5vw;
+    padding: 11rem 12.5vw 8.5rem 12.5vw;
   }
 `
 export const StyledMap = styled.div`

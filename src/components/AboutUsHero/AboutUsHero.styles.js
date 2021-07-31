@@ -5,13 +5,13 @@ import bigImage from "../../assets/images/about/aboutHeroImageBig.jpg"
 export const AboutUsHeroWrapper = styled.div`
   position: relative;
   width: 100%;
-  margin-top: 6rem;
+  margin-top: 7rem;
   background-color: ${({ theme }) => theme.colors.aboutUsHeroBG};
   padding: none;
   margin-bottom: 0;
   @media only screen and (min-width: 700px) {
     padding: 0rem 12.5vw 0rem 12.5vw;
-    margin-bottom: 15rem;
+    margin-bottom: 13rem;
   }
 `
 
@@ -25,6 +25,7 @@ export const AboutUsImage = styled.div`
   @media only screen and (min-width: 700px) {
     height: 720px;
     background: url(${bigImage}) no-repeat;
+    background-size: cover;
   }
   &:before {
     z-index: 0;
@@ -82,6 +83,8 @@ export const AboutUsHeroTitle = styled.h1`
     color: ${({ theme }) => theme.colors.aboutUsHeroTitle};
     font-size: 56px;
     margin: 9rem 0 2rem 0;
+    font-size: 56px;
+    letter-spacing: -2px;
   }
   &:after {
     z-index: 1;
@@ -112,6 +115,7 @@ export const PageDecoration = styled.span`
   color: #eeeff4;
   top: -4.5rem;
   right: 12.5vw;
+  letter-spacing: -3px;
   @media only screen and (min-width: 700px) {
     display: block;
   }

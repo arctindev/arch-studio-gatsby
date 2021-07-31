@@ -1,5 +1,10 @@
 import React from "react"
-import { FeaturedWrapper, StyledTitle } from "./LandingFeatured.styles"
+import {
+  FeaturedWrapper,
+  StyledTitle,
+  ItemWrapper,
+  RWDButton,
+} from "./LandingFeatured.styles"
 import Button from "../Button/Button"
 import ItemWithImage from "../ItemWithImage/ItemWithImage"
 import { LandingFeaturedData } from "../../data/LandingData/LandingData"
@@ -10,19 +15,23 @@ export default function LandingFeatured() {
       <StyledTitle>Featured</StyledTitle>
       {LandingFeaturedData.map((item, index) => {
         return (
-          <ItemWithImage
-            key={index}
-            image={item.image}
-            title={item.title}
-            text={item.text}
-          />
+          <ItemWrapper>
+            <ItemWithImage
+              key={index}
+              image={item.image}
+              title={item.title}
+              text={item.text}
+            />
+          </ItemWrapper>
         )
       })}
-      <Button
-        width="inherit"
-        textContent="See All"
-        linkDirection="/portfolio"
-      />
+      <RWDButton>
+        <Button
+          width="inherit"
+          textContent="See All"
+          linkDirection="/portfolio"
+        />
+      </RWDButton>
     </FeaturedWrapper>
   )
 }

@@ -4,6 +4,18 @@ export const NormalWrapper = styled.div`
   position: relative;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.contactDetailsBG};
+  &:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 4rem;
+    background-color: #c8ccd8;
+    top: 0;
+    left: 6.5vw;
+    @media only screen and (min-width: 700px) {
+      left: 12.5vw;
+    }
+  }
 `
 
 export const DetailsTitle = styled.h1`
@@ -17,6 +29,8 @@ export const DetailsTitle = styled.h1`
   text-align: left;
   @media only screen and (min-width: 700px) {
     font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -2px;
     width: 100%;
   }
 `
@@ -67,7 +81,7 @@ export const StyledButton = styled.button`
 `
 
 export const RwdWrapper = styled.div`
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   width: 100%;
   display: flex;
   flex-direction: column;

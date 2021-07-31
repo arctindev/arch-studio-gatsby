@@ -5,6 +5,10 @@ export const CardWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.imageWithPersonBG};
   height: auto;
   padding-bottom: 2.5rem;
+  @media only screen and (min-width: 700px) {
+    width: 49%;
+    padding-bottom: 4rem;
+  }
 `
 
 export const PersonImage = styled.div`
@@ -16,6 +20,14 @@ export const PersonImage = styled.div`
   background-size: cover;
   background-position: center;
   filter: contrast(110%) saturate(180%) grayscale(25%);
+  & > img {
+    z-index: 0;
+    min-height: 300px;
+    position: relative;
+    object-fit: cover;
+    width: inherit;
+    height: inherit;
+  }
 `
 
 export const PersonName = styled.h3`

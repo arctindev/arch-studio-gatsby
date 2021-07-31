@@ -25,7 +25,9 @@ export default function ItemWithImage({ image, title, text }) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <MaskedImage image={image} active={active} />
+      <MaskedImage active={active}>
+        <img src={image} />
+      </MaskedImage>
       <ItemTextWrapper>
         <ItemTitle>{title}</ItemTitle>
         <ItemText>{text}</ItemText>

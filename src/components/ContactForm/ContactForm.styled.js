@@ -7,7 +7,7 @@ export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   @media only screen and (min-width: 700px) {
-    padding: 0rem 12.5vw 15rem 12.5vw;
+    padding: 0rem 12.5vw 12rem 12.5vw;
   }
 `
 
@@ -30,7 +30,7 @@ export const StyledInput = styled.input`
   border: none;
   border-bottom: 1px solid ${({ theme }) => theme.colors.contactFormBorder};
   width: 100%;
-  padding: 1rem 2rem 1.5rem 2rem;
+  padding: 1.5rem 2rem 1.5rem 2rem;
   margin-bottom: 1rem;
   outline: none;
   line-height: 22.4px;
@@ -48,7 +48,7 @@ export const StyledTextarea = styled.textarea`
   border: none;
   border-bottom: 1px solid ${({ theme }) => theme.colors.contactFormBorder};
   width: 100%;
-  height: 7rem;
+  height: 7.5rem;
   padding: 1rem 2rem 1rem 2rem;
   outline: none;
   line-height: 22.4px;

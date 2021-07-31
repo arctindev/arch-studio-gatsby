@@ -24,8 +24,6 @@ export const MaskedImage = styled.div`
   position: absolute;
   width: 100%;
   height: inherit;
-  background: url(${({ image }) => image}) no-repeat;
-  background-size: cover;
   filter: contrast(125%) saturate(170%) grayscale(20%);
   animation: ${({ active }) => (active ? "colors" : "none")} 0.9s ease-in-out;
   &:after {
@@ -38,6 +36,12 @@ export const MaskedImage = styled.div`
     top: 0;
     left: 0;
     opacity: 0.5;
+  }
+  & > img {
+    object-fit: cover;
+    object-position: 30% 60%;
+    width: inherit;
+    height: inherit;
   }
 `
 

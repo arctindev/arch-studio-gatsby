@@ -5,16 +5,19 @@ import {
   LandingAboutUsWrapper,
   MaskedImage,
   StyledTitle,
+  RWDWrapper,
 } from "./LandingAboutUs.styles"
 
 export default function LandingAboutUs() {
   return (
-    <LandingAboutUsWrapper>
-      <MaskedImage />
-      <InnerWrapper>
-        <StyledTitle>Small team, big ideas</StyledTitle>
-        <Button width="190px" textContent="About Us" linkDirection="/about" />
-      </InnerWrapper>
-    </LandingAboutUsWrapper>
+    <RWDWrapper>
+      <LandingAboutUsWrapper>
+        <MaskedImage />
+        <InnerWrapper>
+          <StyledTitle>Small team, big ideas</StyledTitle>
+          <Button width="190px" textContent="About Us" linkDirection="/about" />
+        </InnerWrapper>
+      </LandingAboutUsWrapper>
+    </RWDWrapper>
   )
 }
