@@ -16,7 +16,7 @@ export const StyledHero = styled.div`
   color: ${({ theme }) => theme.colors.heroFont};
   background: url(${image}) no-repeat;
   background-size: cover;
-  background-position: 50% 70%;
+  background-position: 30% 70%;
   filter: contrast(115%) saturate(150%) brightness(110%);
   display: flex;
   align-items: center;

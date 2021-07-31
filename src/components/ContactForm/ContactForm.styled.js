@@ -35,6 +35,8 @@ export const FormTitle = styled.h1`
   @media only screen and (min-width: 700px) {
     width: 30rem;
     font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -2px;
   }
   @media only screen and (min-width: 1120px) {
     width: 20rem;

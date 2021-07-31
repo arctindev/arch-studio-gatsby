@@ -34,7 +34,7 @@ export const DetailsTitle = styled.h1`
     width: 100%;
   }
   @media only screen and (min-width: 1120px) {
-    width: 25rem;
+    width: 15rem;
     margin-top: 0rem;
   }
 `

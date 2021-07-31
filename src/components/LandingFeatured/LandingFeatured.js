@@ -1,9 +1,10 @@
-import React from "react"
+import React, { Children } from "react"
 import {
   FeaturedWrapper,
   StyledTitle,
-  ItemWrapper,
+  ItemCounter,
   RWDButton,
+  ItemRWDWrapper,
 } from "./LandingFeatured.styles"
 import Button from "../Button/Button"
 import ItemWithImage from "../ItemWithImage/ItemWithImage"
@@ -13,25 +14,26 @@ export default function LandingFeatured() {
   return (
     <FeaturedWrapper>
       <StyledTitle>Featured</StyledTitle>
-      {LandingFeaturedData.map((item, index) => {
-        return (
-          <ItemWrapper key={index}>
+      <ItemRWDWrapper>
+        {LandingFeaturedData.map((item, index) => {
+          return (
             <ItemWithImage
-              key={index}
+              key={index + 1}
+              counter={index + 1}
               image={item.image}
               title={item.title}
               text={item.text}
             />
-          </ItemWrapper>
-        )
-      })}
-      <RWDButton>
-        <Button
-          width="inherit"
-          textContent="See All"
-          linkDirection="/portfolio"
-        />
-      </RWDButton>
+          )
+        })}
+        <RWDButton>
+          <Button
+            width="inherit"
+            textContent="See All"
+            linkDirection="/portfolio"
+          />
+        </RWDButton>
+      </ItemRWDWrapper>
     </FeaturedWrapper>
   )
 }

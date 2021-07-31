@@ -91,7 +91,7 @@ export const ContactHeroTitle = styled.h1`
     color: ${({ theme }) => theme.colors.contactHeroTitle};
     font-size: 56px;
     margin: 9rem 0 2rem 0;
-    font-size: 56px;
+    line-height: 56px;
     letter-spacing: -2px;
   }
   &:after {

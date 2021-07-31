@@ -7,7 +7,7 @@ import {
   ItemTextWrapper,
 } from "./ItemWithImage.styles"
 
-export default function ItemWithImage({ image, title, text }) {
+export default function ItemWithImage({ counter, image, title, text }) {
   const [active, setActive] = useState(false)
   let timeout = ""
   const handleMouseEnter = () => {
@@ -22,6 +22,7 @@ export default function ItemWithImage({ image, title, text }) {
 
   return (
     <ItemWrapper
+      counter={counter}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

@@ -91,7 +91,7 @@ export const AboutUsHeroTitle = styled.h1`
     color: ${({ theme }) => theme.colors.aboutUsHeroTitle};
     font-size: 56px;
     margin: 9rem 0 2rem 0;
-    font-size: 56px;
+    line-height: 56px;
     letter-spacing: -2px;
   }
   &:after {

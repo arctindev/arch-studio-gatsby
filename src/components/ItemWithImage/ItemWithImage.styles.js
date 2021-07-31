@@ -5,6 +5,30 @@ export const ItemWrapper = styled.div`
   width: 100%;
   position: relative;
   margin-bottom: 1.5rem;
+  @media only screen and (min-width: 1120px) {
+    width: 32%;
+    height: 560px;
+  }
+
+  &::after {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 2vw;
+    content: "${({ counter }) => (counter ? counter : null)}";
+    font-size: 200px;
+    color: white;
+    opacity: 0.5;
+    font-family: "Spartan";
+    font-weight: bold;
+    @media only screen and (min-width: 700px) {
+      display: block;
+    }
+    @media only screen and (min-width: 1120px) {
+      right: -1rem;
+    }
+  }
 `
 
 export const MaskedImage = styled.div`
@@ -39,7 +63,7 @@ export const MaskedImage = styled.div`
   }
   & > img {
     object-fit: cover;
-    object-position: 30% 60%;
+    object-position: 50%;
     width: inherit;
     height: inherit;
   }
@@ -53,6 +77,9 @@ export const ItemTextWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   color: ${({ theme }) => theme.colors.itemWithImageText};
+  @media only screen and (min-width: 1120px) {
+    width: 15rem;
+  }
 `
 
 export const ItemTitle = styled.h3`

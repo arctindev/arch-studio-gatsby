@@ -1,9 +1,10 @@
 import styled from "styled-components"
+import image from "../../assets/images/landing/landing-article.jpg"
 
 export const NormalWrapper = styled.div`
   margin-top: 10rem;
   position: relative;
-  transition: padding 0.3s ease-in-out, opacity 0.1s ease-in-out;
+  width: 100%;
   &:before {
     content: "";
     position: absolute;
@@ -20,9 +21,52 @@ export const NormalWrapper = styled.div`
   @media only screen and (min-width: 700px) {
     margin-top: 11rem;
   }
+  @media only screen and (min-width: 1120px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    padding-right: 12.5vw;
+    margin-top: 12rem;
+  }
+`
+export const RWDArticle = styled.div`
+  z-index: 4;
+  width: 100%;
+  @media only screen and (min-width: 1120px) {
+    width: 60%;
+  }
+`
+
+export const ArticleImage = styled.div`
+  position: relative;
+  display: block;
+  width: 25%;
+  height: auto;
+  max-height: 570px;
+  background: url(${image}) no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  filter: contrast(125%) saturate(170%) grayscale(0%);
+  @media only screen and (min-width: 1120px) {
+    display: block;
+  }
+  &:after {
+    z-index: 2;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom left, black, transparent);
+    background-size: cover;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+  }
 `
 
 export const ArticleTitle = styled.h1`
+  z-index: 5;
   line-height: 48px;
   font-size: 40px;
   width: 20rem;
@@ -62,5 +106,14 @@ export const PageDecoration = styled.span`
   @media only screen and (min-width: 768px) {
     font-size: 120px;
     display: block;
+  }
+  @media only screen and (min-width: 1120px) {
+    font-size: 160px;
+    letter-spacing: -5px;
+    top: -7.5rem;
+  }
+  @media only screen and (min-width: 1400px) {
+    font-size: 200px;
+    letter-spacing: -5px;
   }
 `

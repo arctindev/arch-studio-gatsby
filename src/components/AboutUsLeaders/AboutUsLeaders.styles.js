@@ -5,8 +5,15 @@ export const StyledWrapper = styled.div`
   width: 100%;
   padding: 0 6.5vw 0 6.5vw;
   background-color: ${({ theme }) => theme.colors.aboutUsLeadersBG};
+  display: flex;
+  flex-direction: column;
   @media only screen and (min-width: 700px) {
     padding: 7rem 12.5vw 7rem 12.5vw;
+  }
+  @media only screen and (min-width: 1120px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 14rem;
   }
 `
 
@@ -27,10 +34,14 @@ export const LeadersTitle = styled.h1`
 
 export const LeadersWrapper = styled.div`
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: space-between;
   @media only screen and (min-width: 700px) {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  @media only screen and (min-width: 1120px) {
+    width: 60%;
   }
 `

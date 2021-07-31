@@ -1,11 +1,10 @@
 import styled from "styled-components"
 
-export const FeaturedWrapper = styled.ol`
+export const FeaturedWrapper = styled.div`
   position: relative;
   min-height: 960px;
   width: 100%;
   padding: 5rem 6.5vw 5rem 6.5vw;
-  counter-reset: listCounter;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -13,6 +12,17 @@ export const FeaturedWrapper = styled.ol`
   background-color: ${({ theme }) => theme.colors.landingFeaturedBG};
   @media only screen and (min-width: 700px) {
     padding: 5rem 12.5vw 10rem 12.5vw;
+  }
+`
+
+export const ItemRWDWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @media only screen and (min-width: 1120px) {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
   }
 `
 
@@ -28,28 +38,6 @@ export const StyledTitle = styled.h2`
     letter-spacing: -2px;
     line-height: 56px;
     margin-bottom: 5rem;
-  }
-`
-
-export const ItemWrapper = styled.li`
-  counter-increment: listCounter;
-  position: relative;
-  width: inherit;
-  &::after {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 2vw;
-    content: counter(listCounter);
-    font-size: 200px;
-    color: white;
-    opacity: 0.5;
-    font-family: "Spartan";
-    font-weight: bold;
-    @media only screen and (min-width: 700px) {
-      display: block;
-    }
   }
 `
 
