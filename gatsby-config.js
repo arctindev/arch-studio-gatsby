@@ -6,5 +6,24 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  pathPrefix: "/arch-studio-gatsby",
+  plugins: [
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.inline\.svg$/, // See below to configure properly
+        },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        typekit: {
+          id: process.env.TYPEKIT_ID,
+        },
+      },
+    },
+    `gatsby-plugin-styled-components`,
+  ],
 }
