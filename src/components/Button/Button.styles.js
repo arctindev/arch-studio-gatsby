@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
+import pointer from '../../assets/icons/pointer.svg'
 
 export const StyledButton = styled.button`
   border: none;
@@ -10,7 +11,7 @@ export const StyledButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  cursor: url(${pointer}) 8 2, auto;
   transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out,
     filter 0.2s ease-in-out;
   & > span {

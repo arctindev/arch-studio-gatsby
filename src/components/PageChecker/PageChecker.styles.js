@@ -7,7 +7,7 @@ export const StyledSpan = styled.span`
   top: 11rem;
   width: 20rem;
   height: 10rem;
-  left: calc(-15rem + 7vw);
+  left: calc(-14.5rem + 6.2vw);
   letter-spacing: 15px;
   transform: rotateZ(90deg);
   text-transform: uppercase;

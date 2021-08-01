@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
+import pointer from '../../assets/icons/pointer.svg'
 
 export const StyledHeader = styled.header`
   position: fixed;
@@ -36,7 +37,7 @@ export const Navigation = styled.nav`
 
 export const HamburgerButton = styled.button`
   border: none;
-  cursor: pointer;
+  cursor: url(${pointer}) 8 2, auto;
   @media only screen and (min-width: 700px) {
     display: none;
   }
@@ -83,7 +84,7 @@ export const ListItem = styled.li`
   }
 `
 export const StyledBrandingLink = styled(Link)`
-  cursor: pointer;
+  cursor: url(${pointer}) 8 2, auto;
   text-decoration: none;
 `
 
@@ -101,7 +102,7 @@ export const StyledLink = styled(Link)`
   position: relative;
   animation: activeMenu 0.4s ease-in-out;
   font-weight: bold;
-  cursor: pointer;
+  cursor: url(${pointer}) 8 2, auto;
   text-decoration: none;
   color: ${({ theme, onPage, value }) =>
     value === onPage ? theme.colors.headerNavLinkHover : "inherit"};

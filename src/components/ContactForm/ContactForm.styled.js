@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import pointer from '../../assets/icons/pointer.svg'
 
 export const StyledForm = styled.form`
   position: relative;
@@ -99,7 +100,7 @@ export const SubmitWrapper = styled.div`
     top: 30px;
     left: 28px;
     z-index: 0;
-    cursor: pointer;
+    cursor: url(${pointer}) 8 2, auto;
     filter: brightness(1.2);
   }
 `
@@ -113,7 +114,7 @@ export const StyledSubmit = styled.input`
   width: 80px;
   color: ${({ theme }) => theme.colors.buttonFont};
   background-color: transparent;
-  cursor: pointer;
+  cursor: url(${pointer}) 8 2, auto;
   transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out,
     filter 0.2s ease-in-out;
 `

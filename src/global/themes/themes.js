@@ -37,6 +37,11 @@ export const dayTheme = {
     /* ------------ Landing page ----------------- */
     /* Hero */
     heroFont: mainColor,
+    sliderNav: mainColor,
+    sliderNavFont: thirdColor,
+    sliderNavActiveFont: mainColor,
+    sliderNavActiveItem: firstColor,
+    sliderNavHover: secondColor,
     /* LandingAboutUs */
     landingAboutUsText: mainColor,
     /* LandingArticle */

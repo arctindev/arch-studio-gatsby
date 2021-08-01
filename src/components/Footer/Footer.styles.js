@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
+import pointer from '../../assets/icons/pointer.svg'
 
 export const FooterWrapper = styled.footer`
   position: relative;
@@ -49,7 +50,7 @@ export const FooterContent = styled.div`
 `
 
 export const StyledBrandingLink = styled(Link)`
-  cursor: pointer;
+  cursor: url(${pointer}) 8 2, auto;
   text-decoration: none;
   margin-bottom: 2.5rem;
   @media only screen and (min-width: 700px) {
@@ -95,7 +96,7 @@ export const StyledLink = styled(Link)`
       ? theme.colors.footerNavLinkHover
       : theme.colors.footerNavLink};
   font-weight: bold;
-  cursor: pointer;
+  cursor: url(${pointer}) 8 2, auto;
   text-decoration: none;
   margin-bottom: 2.5rem;
   transition: color 0.2s ease-in-out;

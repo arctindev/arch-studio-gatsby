@@ -47,7 +47,7 @@ export const ArticleImage = styled.div`
   background: url(${image}) no-repeat;
   background-size: cover;
   background-position-x: 50%;
-  filter: contrast(125%) saturate(170%) grayscale(0%);
+  filter: contrast(115%) saturate(130%) grayscale(20%);
   @media only screen and (min-width: 1120px) {
     display: block;
   }

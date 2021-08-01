@@ -5,8 +5,7 @@ export const ViewportContext = React.createContext({
 })
 
 export const ViewportProvider = ({ children }) => {
-  const [scrollY, setScrollY] = useState("")
-
+  const [scrollY, setScrollY] = useState(ViewportContext._currentValue.scrollY)
   const throttle = (handler, wait) => {
     let time = Date.now()
     return () => {

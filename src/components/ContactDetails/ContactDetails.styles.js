@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import pointer from '../../assets/icons/pointer.svg'
 
 export const NormalWrapper = styled.div`
   position: relative;
@@ -69,7 +70,7 @@ export const StyledButton = styled.button`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  cursor: pointer;
+  cursor: url(${pointer}) 8 2, auto;
   transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out,
     filter 0.2s ease-in-out;
   & > span {

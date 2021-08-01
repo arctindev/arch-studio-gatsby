@@ -1,8 +1,7 @@
-import React, { Children } from "react"
+import React from "react"
 import {
   FeaturedWrapper,
   StyledTitle,
-  ItemCounter,
   RWDButton,
   ItemRWDWrapper,
 } from "./LandingFeatured.styles"
