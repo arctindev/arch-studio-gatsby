@@ -34,7 +34,7 @@ export const RWDArticle = styled.div`
   z-index: 4;
   width: 100%;
   @media only screen and (min-width: 1120px) {
-    width: 60%;
+    width: 60.5%;
   }
 `
 
@@ -69,11 +69,12 @@ export const ArticleTitle = styled.h1`
   z-index: 5;
   line-height: 48px;
   font-size: 40px;
-  width: 20rem;
+  width: 18rem;
   letter-spacing: -1.43px;
   color: ${({ theme }) => theme.colors.landingArticleTitle};
   margin-top: 4.5rem;
   margin-bottom: 2rem;
+  overflow: hidden;
   @media only screen and (min-width: 700px) {
     width: 25rem;
     font-size: 56px;

@@ -1,9 +1,9 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import pointer from '../../assets/icons/pointer.svg'
+import pointer from "../../assets/icons/pointer.svg"
 
 export const RWDWrapper = styled.div`
-position: relative;
+  position: relative;
   width: 100%;
   overflow: hidden;
   @media only screen and (min-width: 700px) {
@@ -15,14 +15,14 @@ position: relative;
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     top: 0;
     left: 0;
     opacity: 1;
     transform: translateX(-100%);
     @media only screen and (min-width: 700px) {
       transform: translateX(calc(12.5vw - 100%));
-  }
+    }
   }
   &:after {
     z-index: 0;
@@ -30,37 +30,39 @@ position: relative;
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     top: 0;
     left: 0;
     opacity: 1;
     transform: translateX(100%);
     @media only screen and (min-width: 700px) {
-    transform: translateX( calc(100% - 12.5vw))
-  }
+      transform: translateX(calc(100% - 12.5vw));
+    }
   }
 `
 export const StyledHero = styled.div`
   @keyframes appear {
-      0%{
-        opacity:0;
-      }
-      2%{
-        opacity:0;
-      }13%{
-        opacity:1;
-      }87%{
-        opacity:1
-      }
-      98%{
-        opacity:0;
-      }
-      100%{
-        opacity:0;
-      }
+    0% {
+      opacity: 0;
     }
-    opacity:0;
-    animation: appear 12s ease-in-out;
+    2% {
+      opacity: 0;
+    }
+    13% {
+      opacity: 1;
+    }
+    87% {
+      opacity: 1;
+    }
+    98% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  opacity: 0;
+  animation: appear 12s ease-in-out;
   position: relative;
   width: 100%;
   height: 560px;
@@ -72,10 +74,15 @@ export const StyledHero = styled.div`
   justify-content: flex-start;
   margin-top: 6rem;
   @media only screen and (min-width: 700px) {
-    height:720px;
+    height: 720px;
   }
   @media only screen and (min-width: 1120px) {
     padding: 0 12.5vw 0 12.5vw;
+  }
+  @media only screen and (max-height: 700px) {
+    align-items: flex-start;
+    height: 560px;
+    padding-top:4rem;
   }
   &:after {
     z-index: -1;
@@ -83,7 +90,12 @@ export const StyledHero = styled.div`
     position: absolute;
     width: inherit;
     height: inherit;
-    background-image: linear-gradient(to bottom right, black, rgb(25,25,25), rgb(50,50,50));
+    background-image: linear-gradient(
+      to bottom right,
+      black,
+      rgb(25, 25, 25),
+      rgb(50, 50, 50)
+    );
     background-size: cover;
     top: 0;
     left: 0;
@@ -94,15 +106,15 @@ export const StyledHero = styled.div`
 export const StyledImage = styled.img`
   z-index: -1;
   position: absolute;
-  background: url(${({image}) => image}) no-repeat;
+  background: url(${({ image }) => image}) no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  width:100%;
-  height:100%;
-  top:0;
-  left:0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   overflow: hidden;
-`;
+`
 
 export const StyledHeroWrapper = styled.div`
   z-index: 2;
@@ -161,30 +173,38 @@ export const StyledLink = styled(Link)`
 `
 export const SliderNav = styled.div`
   z-index: 6;
-  position:absolute;
-  bottom:0;
-  left:calc(12.5vw - 6.25vw);
-  display:none;
-  background-color: ${({theme}) => theme.colors.sliderNav};
+  position: absolute;
+  bottom: 0;
+  left: calc(12.5vw - 6.25vw);
+  display: none;
+  background-color: ${({ theme }) => theme.colors.sliderNav};
   @media only screen and (min-width: 1120px) {
-    display:flex;
+    display: flex;
   }
-`;
+`
 
 export const SliderNavItem = styled.div`
   cursor: url(${pointer}) 8 2, auto;
-  width:6.25vw;
-  height:6.25vw;
-  display:flex;
+  width: 6.25vw;
+  height: 6.25vw;
+  max-height: 160px;
+  display: flex;
   justify-content: center;
   font-size: 15px;
   line-height: 25px;
   font-weight: bold;
   letter-spacing: 0px;
   align-items: center;
-  color: ${({theme,value,state}) => value===state ? theme.colors.sliderNavActiveFont : theme.colors.sliderNavFont};
-  background-color: ${({theme,value,state}) => value===state ? theme.colors.sliderNavActiveItem : 'transparent'};
-  &:hover{
-    background-color: ${({theme,value,state}) => value===state ? theme.colors.sliderNavActiveItem : theme.colors.sliderNavHover};
+  color: ${({ theme, value, state }) =>
+    value === state
+      ? theme.colors.sliderNavActiveFont
+      : theme.colors.sliderNavFont};
+  background-color: ${({ theme, value, state }) =>
+    value === state ? theme.colors.sliderNavActiveItem : "transparent"};
+  &:hover {
+    background-color: ${({ theme, value, state }) =>
+      value === state
+        ? theme.colors.sliderNavActiveItem
+        : theme.colors.sliderNavHover};
   }
-`;
+`

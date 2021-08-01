@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 import LinkedinIcon from "../../assets/icons/linkedin.inline.svg"
 import TwitterIcon from "../../assets/icons/twitter.inline.svg"
 
@@ -12,24 +12,26 @@ import {
 } from "./CardWithPerson.styles"
 
 export default function CardWithPerson({ image, name, job }) {
-    const [active, setActive] = useState(false)
+  const [active, setActive] = useState(false)
 
   const handleMouseEnter = () => {
     setActive(() => true)
   }
 
   const handleMouseLeave = () => {
-      setActive(() => false)
+    setActive(() => false)
   }
 
   return (
-    <CardWrapper onMouseEnter={handleMouseEnter}
-    onMouseLeave={handleMouseLeave}>
+    <CardWrapper
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <PersonImage active={active}>
         <img src={image} />
         <PersonIcons active={active}>
-        <LinkedinIcon />
-        <TwitterIcon />
+          <LinkedinIcon />
+          <TwitterIcon />
         </PersonIcons>
       </PersonImage>
       <PersonName>{name}</PersonName>
