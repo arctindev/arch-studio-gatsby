@@ -4,4 +4,4 @@ Technology:
 
 Gatsby, styled components
 
-![](./Screenshot 2021-08-01 at 20-24-31 Screenshot.png)
+![](./Screenshot.png)
