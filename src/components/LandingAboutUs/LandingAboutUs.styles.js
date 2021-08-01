@@ -26,7 +26,7 @@ export const MaskedImage = styled.div`
   height: inherit;
   background: url(${image}) no-repeat;
   background-size: cover;
-  background-position: 50% 70%;
+  background-position: 60% 70%;
   filter: contrast(120%) saturate(160%) grayscale(15%);
   &:after {
     z-index: 1;
@@ -48,7 +48,10 @@ export const InnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0vh 13vw 0 6.5vw;
+  padding: 0vh 12.5vw 0 6.5vw;
+  @media only screen and (min-width: 1120px) {
+    padding: 0 19vw 0 12.5vw;
+  }
 `
 
 export const StyledTitle = styled.h2`
@@ -57,7 +60,8 @@ export const StyledTitle = styled.h2`
   line-height: 48px;
   letter-spacing: -1.2px;
   margin-bottom: 2rem;
-  width: 20rem;
+  width: 18rem;
+  overflow: hidden;
   @media only screen and (min-width: 700px) {
     width: 25rem;
     font-size: 56px;

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import pointer from '../../assets/icons/pointer.svg'
+import pointer from "../../assets/icons/pointer.svg"
 
 export const NormalWrapper = styled.div`
   position: relative;
@@ -35,7 +35,8 @@ export const DetailsTitle = styled.h1`
     width: 100%;
   }
   @media only screen and (min-width: 1120px) {
-    width: 15rem;
+    width: 33%;
+    max-width: 15rem;
     margin-top: 0rem;
   }
 `

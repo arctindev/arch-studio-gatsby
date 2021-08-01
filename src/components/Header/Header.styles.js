@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import pointer from '../../assets/icons/pointer.svg'
+import pointer from "../../assets/icons/pointer.svg"
 
 export const StyledHeader = styled.header`
   position: fixed;

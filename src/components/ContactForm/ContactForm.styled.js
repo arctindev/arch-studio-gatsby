@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import pointer from '../../assets/icons/pointer.svg'
+import pointer from "../../assets/icons/pointer.svg"
 
 export const StyledForm = styled.form`
   position: relative;
@@ -40,7 +40,8 @@ export const FormTitle = styled.h1`
     letter-spacing: -2px;
   }
   @media only screen and (min-width: 1120px) {
-    width: 20rem;
+    width: 33%;
+    max-width: 15rem;
   }
 `
 
