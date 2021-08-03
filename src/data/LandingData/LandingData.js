@@ -3,24 +3,17 @@ import sliderImage1 from "../../assets/images/landing/hero-image.jpg"
 import sliderImage2 from "../../assets/images/landing/hero-image2.jpg"
 import sliderImage3 from "../../assets/images/landing/hero-image3.jpg"
 import sliderImage4 from "../../assets/images/landing/hero-image4.jpg"
-/* ----------- FEATURED --------------- */
-import firstImage from "../../assets/images/landing/Featured01.jpg"
-import secondImage from "../../assets/images/landing/Featured02.jpg"
-import thirdImage from "../../assets/images/landing/Featured03.jpg"
 
 export const LandingFeaturedData = [
   {
-    image: firstImage,
     title: "Project Del Sol",
     text: "View All Projects",
   },
   {
-    image: secondImage,
     title: "228B Tower",
     text: "View All Projects",
   },
   {
-    image: thirdImage,
     title: "Le Prototype",
     text: "View All Projects",
   },
