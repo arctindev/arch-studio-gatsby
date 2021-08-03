@@ -6,6 +6,7 @@ import {
   MaskedImage,
   ItemTextWrapper,
 } from "./ItemWithImage.styles"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export default function ItemWithImage({ counter, image, title, text }) {
   const [active, setActive] = useState(false)
@@ -19,7 +20,7 @@ export default function ItemWithImage({ counter, image, title, text }) {
       setActive(() => false)
     }, 750)
   }
-
+  console.log(image)
   return (
     <ItemWrapper
       counter={counter}
@@ -27,7 +28,7 @@ export default function ItemWithImage({ counter, image, title, text }) {
       onMouseLeave={handleMouseLeave}
     >
       <MaskedImage active={active}>
-        <img src={image} />
+        <GatsbyImage style={{ height: "100%", width: "100%" }} imgStyle={{ objectFit: "cover" }} image={image} alt="image"/>
       </MaskedImage>
       <ItemTextWrapper>
         <ItemTitle>{title}</ItemTitle>

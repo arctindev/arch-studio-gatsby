@@ -61,12 +61,6 @@ export const MaskedImage = styled.div`
     left: 0;
     opacity: 0.5;
   }
-  & > img {
-    object-fit: cover;
-    object-position: 50%;
-    width: inherit;
-    height: inherit;
-  }
 `
 
 export const ItemTextWrapper = styled.div`
