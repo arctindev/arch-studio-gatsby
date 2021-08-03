@@ -31,7 +31,7 @@ export const PersonImage = styled.div`
     height: inherit;
     transition: filter 0.3s ease-in-out;
   }
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     & > img {
       filter: ${({ active }) => (active ? "brightness(60%)" : "none")};
     }
@@ -53,7 +53,7 @@ export const PersonIcons = styled.div`
   align-items: center;
   width: 5.5rem;
   animation: showIcon 0.3s ease-in-out;
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     display: ${({ active }) => (active ? "flex" : "none")};
     top: calc(50% - 19px);
     left: calc(50% - 44px);
@@ -86,7 +86,7 @@ export const Icons = styled.div`
   align-items: center;
   width: 5.5rem;
   cursor: url(${pointer}) 8 2, auto;
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     display: none;
   }
 `

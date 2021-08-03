@@ -16,14 +16,13 @@ import { LandingSliderData } from "../../data/LandingData/LandingData"
 
 export default function Hero() {
   const [state, setState] = useState(0)
-  let time = ""
   const handleNavClick = value => {
     clearTimeout(time)
     setState(value)
   }
 
-  useEffect(() => {
-    time = setTimeout(() => {
+  let time = useEffect(() => {
+    return setTimeout(() => {
       setState(() => (state < LandingSliderData.length - 1 ? state + 1 : 0))
     }, 12000)
   }, [state])
@@ -44,9 +43,10 @@ export default function Hero() {
         </StyledHeroWrapper>
       </StyledHero>
       <SliderNav>
-        {LandingSliderData.map(item => {
+        {LandingSliderData.map((item, index) => {
           return (
             <SliderNavItem
+              key={index}
               onClick={() => handleNavClick(item.id - 1)}
               value={item.id}
               state={state + 1}

@@ -11,7 +11,7 @@ export const PortfolioWrapper = styled.div`
     padding: 0vh 12.5vw 7rem 12.5vw;
     margin-top: 6rem;
   }
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;

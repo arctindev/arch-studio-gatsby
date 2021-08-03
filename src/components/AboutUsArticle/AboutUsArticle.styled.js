@@ -16,7 +16,7 @@ export const NormalWrapper = styled.div`
       left: 12.5vw;
     }
   }
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -32,7 +32,7 @@ export const ArticleImage = styled.div`
   background: url(${image}) no-repeat;
   background-size: 800px;
   filter: contrast(125%) saturate(170%) grayscale(0%);
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     display: block;
   }
   &:after {
@@ -51,7 +51,7 @@ export const ArticleImage = styled.div`
 
 export const RWDArticle = styled.div`
   width: 100%;
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     width: 60%;
   }
 `

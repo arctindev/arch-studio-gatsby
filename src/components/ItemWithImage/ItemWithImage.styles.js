@@ -77,7 +77,7 @@ export const ItemTextWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   color: ${({ theme }) => theme.colors.itemWithImageText};
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     width: 15rem;
   }
 `

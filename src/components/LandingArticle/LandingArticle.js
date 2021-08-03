@@ -8,23 +8,44 @@ import {
   RWDArticle,
 } from "./LandingArticle.styles"
 import ArticleWithDecoration from "../ArticleWithDecoration/ArticleWithDecoration"
-import { LandingArticleData } from "../../data/LandingData/LandingData"
+import { useStaticQuery, graphql } from "gatsby"
 
 export default function LandingArticle() {
+  const { data } = useStaticQuery(landingArticleQuery)
+  const { title, text1, text2, text3 } = data.nodes[0].frontmatter.Article
+
   return (
     <NormalWrapper>
       <RWDArticle>
         <PageDecoration>Welcome</PageDecoration>
-        {LandingArticleData.map((item, index) => (
-          <ArticleWithDecoration key={index}>
-            <ArticleTitle>{item.title}</ArticleTitle>
-            <ArticleText>{item.article1}</ArticleText>
-            <ArticleText>{item.article2}</ArticleText>
-            <ArticleText>{item.article3}</ArticleText>
-          </ArticleWithDecoration>
-        ))}
+        <ArticleWithDecoration>
+          <ArticleTitle>{title}</ArticleTitle>
+          <ArticleText>{text1}</ArticleText>
+          <ArticleText>{text2}</ArticleText>
+          <ArticleText>{text3}</ArticleText>
+        </ArticleWithDecoration>
       </RWDArticle>
       <ArticleImage />
     </NormalWrapper>
   )
 }
+
+export const landingArticleQuery = graphql`
+  query MyLandingtDataQuery {
+    data: allMarkdownRemark(
+      filter: { frontmatter: { Article: { location: { eq: "home" } } } }
+    ) {
+      nodes {
+        frontmatter {
+          Article {
+            title
+            text1
+            text2
+            text3
+          }
+        }
+        id
+      }
+    }
+  }
+`

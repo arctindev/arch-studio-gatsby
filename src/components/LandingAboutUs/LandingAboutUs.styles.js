@@ -49,7 +49,10 @@ export const InnerWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 0vh 12.5vw 0 6.5vw;
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 700px) {
+    height: 500px;
+  }
+  @media only screen and (min-width: 1180px) {
     padding: 0 19vw 0 12.5vw;
   }
 `
@@ -67,5 +70,8 @@ export const StyledTitle = styled.h2`
     font-size: 56px;
     letter-spacing: -2px;
     line-height: 56px;
+    height: auto;
+    padding: 2rem 0;
+    margin-bottom: 0;
   }
 `
