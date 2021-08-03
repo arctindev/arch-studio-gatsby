@@ -28,7 +28,12 @@ export default function ItemWithImage({ counter, image, title, text }) {
       onMouseLeave={handleMouseLeave}
     >
       <MaskedImage active={active}>
-        <GatsbyImage style={{ height: "100%", width: "100%" }} imgStyle={{ objectFit: "cover" }} image={image} alt="image"/>
+        <GatsbyImage
+          style={{ height: "100%", width: "100%" }}
+          imgStyle={{ objectFit: "cover" }}
+          image={image}
+          alt="image"
+        />
       </MaskedImage>
       <ItemTextWrapper>
         <ItemTitle>{title}</ItemTitle>
