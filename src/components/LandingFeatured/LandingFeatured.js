@@ -8,8 +8,12 @@ import {
 import Button from "../Button/Button"
 import ItemWithImage from "../ItemWithImage/ItemWithImage"
 import { LandingFeaturedData } from "../../data/LandingData/LandingData"
+import { graphql, useStaticQuery } from "gatsby"
 
 export default function LandingFeatured() {
+  const { data } = useStaticQuery(featuredImagesQuery)
+  console.log(data.edges[0].node.gatsbyImageData)
+
   return (
     <FeaturedWrapper>
       <StyledTitle>Featured</StyledTitle>
@@ -19,7 +23,7 @@ export default function LandingFeatured() {
             <ItemWithImage
               key={index + 1}
               counter={index + 1}
-              image={item.image}
+              image={data.edges[index].node.gatsbyImageData}
               title={item.title}
               text={item.text}
             />
@@ -36,3 +40,16 @@ export default function LandingFeatured() {
     </FeaturedWrapper>
   )
 }
+
+export const featuredImagesQuery = graphql`
+  query FeaturedQuery {
+  data : allImageSharp(filter: {fluid: {originalName: {regex: "/featured/"}}}) {
+    edges {
+      node {
+        gatsbyImageData
+      }
+    }
+  }
+}
+
+`;
