@@ -59,8 +59,8 @@ module.exports = {
           pngOptions: {},
           webpOptions: {},
           avifOptions: {},
-        }
-      }
+        },
+      },
     },
     `gatsby-transformer-sharp`,
   ],
@@ -68,7 +68,7 @@ module.exports = {
     title: "Arch Studio",
     titleTemplate: "%s · Arch Studio",
     description: "Arch Studio Portfolio",
-    url: "localhost:8000",
-    image: "https://arctindev.github.io/arch-studio-gatsby/favicon.ico",
+    url: "https://6109b1a65db4bd00088bbaae--happy-curran-b120e3.netlify.app",
+    image: "/favicon.ico",
   },
 }

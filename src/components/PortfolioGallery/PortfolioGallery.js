@@ -6,7 +6,6 @@ import { graphql, useStaticQuery } from "gatsby"
 
 export default function PortfolioGallery() {
   const { data } = useStaticQuery(PortfolioImagesQuery)
-  console.log(data.edges[0].node.gatsbyImageData)
   return (
     <PortfolioWrapper>
       {portfolioGaleryData.map((item, index) => {
@@ -25,13 +24,14 @@ export default function PortfolioGallery() {
 
 export const PortfolioImagesQuery = graphql`
   query PortfolioQuery {
-  data : allImageSharp(filter: {fluid: {originalName: {regex: "/portfolio/"}}}) {
-    edges {
-      node {
-        gatsbyImageData
+    data: allImageSharp(
+      filter: { fluid: { originalName: { regex: "/portfolio/" } } }
+    ) {
+      edges {
+        node {
+          gatsbyImageData
+        }
       }
     }
   }
-}
-
-`;
+`

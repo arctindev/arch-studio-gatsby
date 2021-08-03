@@ -12,7 +12,6 @@ import { graphql, useStaticQuery } from "gatsby"
 
 export default function LandingFeatured() {
   const { data } = useStaticQuery(featuredImagesQuery)
-  console.log(data.edges[0].node.gatsbyImageData)
 
   return (
     <FeaturedWrapper>
@@ -43,13 +42,14 @@ export default function LandingFeatured() {
 
 export const featuredImagesQuery = graphql`
   query FeaturedQuery {
-  data : allImageSharp(filter: {fluid: {originalName: {regex: "/featured/"}}}) {
-    edges {
-      node {
-        gatsbyImageData
+    data: allImageSharp(
+      filter: { fluid: { originalName: { regex: "/featured/" } } }
+    ) {
+      edges {
+        node {
+          gatsbyImageData
+        }
       }
     }
   }
-}
-
-`;
+`
