@@ -10,7 +10,7 @@ export const StyledWrapper = styled.div`
   @media only screen and (min-width: 700px) {
     padding: 7rem 12.5vw 7rem 12.5vw;
   }
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     flex-direction: row;
     justify-content: space-between;
     padding-top: 14rem;
@@ -41,7 +41,7 @@ export const LeadersWrapper = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
   }
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     width: 60%;
   }
 `

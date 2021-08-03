@@ -19,7 +19,7 @@ export const ItemRWDWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     flex-direction: row;
     width: 100%;
     justify-content: space-between;

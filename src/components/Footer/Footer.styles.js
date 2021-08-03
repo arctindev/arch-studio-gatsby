@@ -11,7 +11,7 @@ export const FooterWrapper = styled.footer`
   @media only screen and (min-width: 700px) {
     height: 120px;
   }
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     width: calc(100% - 12.5vw);
     margin: 0 12.5vw 0 12.5vw;
   }
@@ -28,7 +28,7 @@ export const FooterWrapper = styled.footer`
       height: 120px;
       width: calc(100% - 156px);
     }
-    @media only screen and (min-width: 1120px) {
+    @media only screen and (min-width: 1180px) {
       height: 120px;
       width: calc(100% - 156px - 12.5vw);
     }

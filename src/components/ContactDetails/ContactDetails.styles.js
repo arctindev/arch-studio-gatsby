@@ -34,7 +34,7 @@ export const DetailsTitle = styled.h1`
     letter-spacing: -2px;
     width: 100%;
   }
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     width: 33%;
     max-width: 15rem;
     margin-top: 0rem;
@@ -88,7 +88,7 @@ export const StyledButton = styled.button`
 export const DesktopWrapper = styled.div`
   display: block;
   width: 100%;
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -109,7 +109,7 @@ export const RwdWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
   }
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;

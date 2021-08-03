@@ -10,7 +10,7 @@ export const StyledForm = styled.form`
   @media only screen and (min-width: 700px) {
     padding: 0rem 12.5vw 12rem 12.5vw;
   }
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -19,7 +19,7 @@ export const RWDFormWrapper = styled.form`
   width: inherit;
   display: flex;
   flex-direction: column;
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     width: 60%;
   }
 `
@@ -39,7 +39,7 @@ export const FormTitle = styled.h1`
     line-height: 56px;
     letter-spacing: -2px;
   }
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     width: 33%;
     max-width: 15rem;
   }

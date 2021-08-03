@@ -27,7 +27,7 @@ export const AboutUsImage = styled.div`
     background: url(${bigImage}) no-repeat;
     background-size: cover;
   }
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     background: url(${bigImage}) no-repeat;
     background-size: cover;
     width: 70%;
@@ -59,7 +59,7 @@ export const TextWrapper = styled.div`
     width: calc(100% - 18.5vw);
     padding: 3rem 12.5vw 5rem 6.5vw;
   }
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     width: calc(70% - 18.5vw);
   }
   &:before {

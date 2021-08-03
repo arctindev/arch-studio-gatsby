@@ -76,13 +76,13 @@ export const StyledHero = styled.div`
   @media only screen and (min-width: 700px) {
     height: 720px;
   }
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     padding: 0 12.5vw 0 12.5vw;
   }
-  @media only screen and (max-height: 700px) {
+  @media only screen and (max-height: 800px) {
     align-items: flex-start;
     height: 560px;
-    padding-top:4rem;
+    padding-top: 4rem;
   }
   &:after {
     z-index: -1;
@@ -103,7 +103,7 @@ export const StyledHero = styled.div`
   }
 `
 
-export const StyledImage = styled.img`
+export const StyledImage = styled.div`
   z-index: -1;
   position: absolute;
   background: url(${({ image }) => image}) no-repeat;
@@ -178,7 +178,7 @@ export const SliderNav = styled.div`
   left: calc(12.5vw - 6.25vw);
   display: none;
   background-color: ${({ theme }) => theme.colors.sliderNav};
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     display: flex;
   }
 `

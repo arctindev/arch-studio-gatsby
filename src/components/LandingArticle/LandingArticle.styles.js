@@ -21,7 +21,7 @@ export const NormalWrapper = styled.div`
   @media only screen and (min-width: 700px) {
     margin-top: 11rem;
   }
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -33,7 +33,7 @@ export const NormalWrapper = styled.div`
 export const RWDArticle = styled.div`
   z-index: 4;
   width: 100%;
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     width: 60.5%;
   }
 `
@@ -48,7 +48,7 @@ export const ArticleImage = styled.div`
   background-size: cover;
   background-position-x: 50%;
   filter: contrast(115%) saturate(130%) grayscale(20%);
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     display: block;
   }
   &:after {
@@ -108,7 +108,7 @@ export const PageDecoration = styled.span`
     font-size: 120px;
     display: block;
   }
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1180px) {
     font-size: 160px;
     letter-spacing: -5px;
     top: -7.5rem;
