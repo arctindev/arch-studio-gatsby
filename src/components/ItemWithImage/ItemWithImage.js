@@ -20,7 +20,6 @@ export default function ItemWithImage({ counter, image, title, text }) {
       setActive(() => false)
     }, 750)
   }
-  console.log(image)
   return (
     <ItemWrapper
       counter={counter}
@@ -32,7 +31,7 @@ export default function ItemWithImage({ counter, image, title, text }) {
           style={{ height: "100%", width: "100%" }}
           imgStyle={{ objectFit: "cover" }}
           image={image}
-          alt="image"
+          alt=""
         />
       </MaskedImage>
       <ItemTextWrapper>

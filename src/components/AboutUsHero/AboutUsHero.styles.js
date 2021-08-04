@@ -1,6 +1,4 @@
 import styled from "styled-components"
-import image from "../../assets/images/about/aboutHeroImage.jpg"
-import bigImage from "../../assets/images/about/aboutHeroImageBig.jpg"
 
 export const AboutUsHeroWrapper = styled.div`
   position: relative;
@@ -17,23 +15,20 @@ export const AboutUsHeroWrapper = styled.div`
 
 export const AboutUsImage = styled.div`
   position: relative;
-  background: url(${image}) no-repeat;
   background-size: cover;
   width: 100%;
   height: 240px;
   filter: contrast(110%) saturate(190%);
   @media only screen and (min-width: 700px) {
     height: 720px;
-    background: url(${bigImage}) no-repeat;
     background-size: cover;
   }
   @media only screen and (min-width: 1180px) {
-    background: url(${bigImage}) no-repeat;
     background-size: cover;
     width: 70%;
   }
   &:before {
-    z-index: 0;
+    z-index: 1;
     content: "";
     height: inherit;
     width: 100%;

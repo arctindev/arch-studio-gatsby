@@ -106,7 +106,6 @@ export const StyledHero = styled.div`
 export const StyledImage = styled.div`
   z-index: -1;
   position: absolute;
-  background: url(${({ image }) => image}) no-repeat;
   background-size: cover;
   background-position: 50% 50%;
   width: 100%;

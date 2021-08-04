@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import image from "../../assets/images/landing/landing-article.jpg"
 
 export const NormalWrapper = styled.div`
   margin-top: 10rem;
@@ -40,11 +39,10 @@ export const RWDArticle = styled.div`
 
 export const ArticleImage = styled.div`
   position: relative;
-  display: block;
+  display: none;
   width: 25%;
   height: auto;
   max-height: 570px;
-  background: url(${image}) no-repeat;
   background-size: cover;
   background-position-x: 50%;
   filter: contrast(115%) saturate(130%) grayscale(20%);

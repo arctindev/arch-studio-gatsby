@@ -10,6 +10,7 @@ import {
   PersonIcons,
   Icons,
 } from "./CardWithPerson.styles"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export default function CardWithPerson({ image, name, job }) {
   const [active, setActive] = useState(false)
@@ -23,15 +24,30 @@ export default function CardWithPerson({ image, name, job }) {
   }
 
   return (
-    <CardWrapper
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
+    <CardWrapper>
       <PersonImage active={active}>
-        <img src={image} />
+        <GatsbyImage
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          style={{
+            zIndex: "0",
+            height: "100%",
+            width: "100%",
+            minHeight: "300px",
+          }}
+          imgStyle={{ objectFit: "cover" }}
+          image={image}
+          alt="image"
+        />
         <PersonIcons active={active}>
-          <LinkedinIcon />
-          <TwitterIcon />
+          <LinkedinIcon
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          />
+          <TwitterIcon
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          />
         </PersonIcons>
       </PersonImage>
       <PersonName>{name}</PersonName>

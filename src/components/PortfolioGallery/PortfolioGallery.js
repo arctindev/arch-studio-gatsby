@@ -26,6 +26,7 @@ export const PortfolioImagesQuery = graphql`
   query PortfolioQuery {
     data: allImageSharp(
       filter: { fluid: { originalName: { regex: "/portfolio/" } } }
+      sort: { order: ASC, fields: fluid___originalName }
     ) {
       edges {
         node {

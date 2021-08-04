@@ -18,41 +18,22 @@ export const PersonImage = styled.div`
   width: 100%;
   min-height: 300px;
   margin-bottom: 1.5rem;
-  background: url(${({ image }) => image}) no-repeat;
   background-size: cover;
   background-position: center;
   filter: contrast(110%) saturate(180%) grayscale(25%);
-  & > img {
-    z-index: 0;
-    min-height: 300px;
-    position: relative;
-    object-fit: cover;
-    width: inherit;
-    height: inherit;
-    transition: filter 0.3s ease-in-out;
-  }
   @media only screen and (min-width: 1180px) {
-    & > img {
+    & img {
       filter: ${({ active }) => (active ? "brightness(60%)" : "none")};
     }
   }
 `
 export const PersonIcons = styled.div`
-  @keyframes showIcon {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
   position: absolute;
   padding-top: 6px;
   display: none;
   justify-content: space-between;
   align-items: center;
   width: 5.5rem;
-  animation: showIcon 0.3s ease-in-out;
   @media only screen and (min-width: 1180px) {
     display: ${({ active }) => (active ? "flex" : "none")};
     top: calc(50% - 19px);

@@ -21,6 +21,7 @@ const SEO = ({ title, description }) => {
       <meta name="description" content={seo.description} />
       <link rel="icon" type="image/png" sizes="16x16" href={`${seo.image}`} />
       <meta name="url" content={`${seo.url}`} />
+      <html lang="pl" />
     </Helmet>
   )
 }
