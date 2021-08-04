@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import image from "../../assets/images/about/articleImage.jpg"
 
 export const NormalWrapper = styled.div`
   position: relative;
@@ -28,9 +27,7 @@ export const ArticleImage = styled.div`
   position: relative;
   display: none;
   width: 40%;
-  height: auto;
-  background: url(${image}) no-repeat;
-  background-size: 800px;
+  height: 700px;
   filter: contrast(125%) saturate(170%) grayscale(0%);
   @media only screen and (min-width: 1180px) {
     display: block;

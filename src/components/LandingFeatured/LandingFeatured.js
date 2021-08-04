@@ -44,6 +44,7 @@ export const featuredImagesQuery = graphql`
   query FeaturedQuery {
     data: allImageSharp(
       filter: { fluid: { originalName: { regex: "/featured/" } } }
+      sort: { order: ASC, fields: fluid___originalName }
     ) {
       edges {
         node {

@@ -13,24 +13,35 @@ import {
 } from "./Hero.styles"
 import ButtonArrow from "../../assets/icons/button-arrow.inline.svg"
 import { LandingSliderData } from "../../data/LandingData/LandingData"
+import { useStaticQuery, graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export default function Hero() {
+  const { data } = useStaticQuery(sliderImagesQuery)
   const [state, setState] = useState(0)
+  let time = ""
+  useEffect(() => {
+    time = setTimeout(() => {
+      setState(() => (state < LandingSliderData.length - 1 ? state + 1 : 0))
+    }, 12000)
+  }, [state])
+
   const handleNavClick = value => {
     clearTimeout(time)
     setState(value)
   }
 
-  let time = useEffect(() => {
-    return setTimeout(() => {
-      setState(() => (state < LandingSliderData.length - 1 ? state + 1 : 0))
-    }, 12000)
-  }, [state])
-
   return (
     <RWDWrapper>
       <StyledHero key={state}>
-        <StyledImage image={LandingSliderData[state].image} />
+        <StyledImage>
+          <GatsbyImage
+            style={{ height: "100%", width: "100%" }}
+            imgStyle={{ objectFit: "cover" }}
+            image={data.edges[state].node.gatsbyImageData}
+            alt="image"
+          />
+        </StyledImage>
         <StyledHeroWrapper>
           <StyledHeroTitle>{LandingSliderData[state].title}</StyledHeroTitle>
           <StyledHeroText>{LandingSliderData[state].text}</StyledHeroText>
@@ -59,3 +70,18 @@ export default function Hero() {
     </RWDWrapper>
   )
 }
+
+export const sliderImagesQuery = graphql`
+  query sliderQuery {
+    data: allImageSharp(
+      filter: { fluid: { originalName: { regex: "/hero-image/" } } }
+      sort: { order: ASC, fields: fluid___originalName }
+    ) {
+      edges {
+        node {
+          gatsbyImageData
+        }
+      }
+    }
+  }
+`

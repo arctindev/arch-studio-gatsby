@@ -9,11 +9,12 @@ import {
 } from "./LandingArticle.styles"
 import ArticleWithDecoration from "../ArticleWithDecoration/ArticleWithDecoration"
 import { useStaticQuery, graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export default function LandingArticle() {
-  const { data } = useStaticQuery(landingArticleQuery)
+  const { data, imageData } = useStaticQuery(landingArticleQuery)
   const { title, text1, text2, text3 } = data.nodes[0].frontmatter.Article
-
+  const image = imageData.edges[0].node.gatsbyImageData
   return (
     <NormalWrapper>
       <RWDArticle>
@@ -25,13 +26,20 @@ export default function LandingArticle() {
           <ArticleText>{text3}</ArticleText>
         </ArticleWithDecoration>
       </RWDArticle>
-      <ArticleImage />
+      <ArticleImage>
+        <GatsbyImage
+          style={{ height: "100%", width: "100%" }}
+          imgStyle={{ objectFit: "cover" }}
+          image={image}
+          alt="image"
+        />
+      </ArticleImage>
     </NormalWrapper>
   )
 }
 
 export const landingArticleQuery = graphql`
-  query MyLandingtDataQuery {
+  query MyLandingDataQuery {
     data: allMarkdownRemark(
       filter: { frontmatter: { Article: { location: { eq: "home" } } } }
     ) {
@@ -44,7 +52,15 @@ export const landingArticleQuery = graphql`
             text3
           }
         }
-        id
+      }
+    }
+    imageData: allImageSharp(
+      filter: { fluid: { originalName: { regex: "/landing-article/" } } }
+    ) {
+      edges {
+        node {
+          gatsbyImageData
+        }
       }
     }
   }

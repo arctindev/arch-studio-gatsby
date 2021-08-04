@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import image from "../../assets/images/landing/landing-about-us-image.jpg"
 
 export const RWDWrapper = styled.div`
   width: 100%;
@@ -24,7 +23,6 @@ export const MaskedImage = styled.div`
   position: absolute;
   width: 100%;
   height: inherit;
-  background: url(${image}) no-repeat;
   background-size: cover;
   background-position: 60% 70%;
   filter: contrast(120%) saturate(160%) grayscale(15%);
