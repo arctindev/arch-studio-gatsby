@@ -47,7 +47,11 @@ export const FormTitle = styled.h1`
 
 export const StyledInput = styled.input`
   border: none;
-  border-bottom: 1px solid ${({ theme, warning }) =>warning? theme.colors.contactFormWarning : theme.colors.contactFormBorder};
+  border-bottom: 1px solid
+    ${({ theme, warning }) =>
+      warning
+        ? theme.colors.contactFormWarning
+        : theme.colors.contactFormBorder};
   width: 100%;
   padding: 1.5rem 2rem 1.5rem 2rem;
   margin-bottom: 1rem;
@@ -57,15 +61,23 @@ export const StyledInput = styled.input`
   font-family: inherit;
   font-size: 20px;
   font-weight: bold;
-  color: ${({ theme, warning }) =>warning? theme.colors.contactFormWarning : theme.colors.contactFormText};
+  color: ${({ theme, warning }) =>
+    warning ? theme.colors.contactFormWarning : theme.colors.contactFormText};
   ::placeholder {
-    color: ${({ theme, warning }) =>warning? theme.colors.contactFormWarning : theme.colors.contactFormPlaceholder};
+    color: ${({ theme, warning }) =>
+      warning
+        ? theme.colors.contactFormWarning
+        : theme.colors.contactFormPlaceholder};
   }
 `
 
 export const StyledTextarea = styled.textarea`
   border: none;
-  border-bottom: 1px solid ${({ theme, warning }) =>warning? theme.colors.contactFormWarning : theme.colors.contactFormBorder};
+  border-bottom: 1px solid
+    ${({ theme, warning }) =>
+      warning
+        ? theme.colors.contactFormWarning
+        : theme.colors.contactFormBorder};
   width: 100%;
   height: 7.5rem;
   padding: 1rem 2rem 1rem 2rem;
@@ -76,9 +88,13 @@ export const StyledTextarea = styled.textarea`
   font-family: inherit;
   font-weight: bold;
   resize: none;
-  color: ${({ theme, warning }) => warning? theme.colors.contactFormWarning : theme.colors.contactFormText};
+  color: ${({ theme, warning }) =>
+    warning ? theme.colors.contactFormWarning : theme.colors.contactFormText};
   ::placeholder {
-    color: ${({ theme, warning }) =>warning? theme.colors.contactFormWarning : theme.colors.contactFormPlaceholder};
+    color: ${({ theme, warning }) =>
+      warning
+        ? theme.colors.contactFormWarning
+        : theme.colors.contactFormPlaceholder};
     font-size: inherit;
     font-family: inherit;
     letter-spacing: inherit;

@@ -9,6 +9,7 @@ import {
   RWDFormWrapper,
 } from "./ContactForm.styled"
 import ButtonArrow from "../../assets/icons/button-arrow.inline.svg"
+import { sendForm } from "../../api/SendForm"
 
 const initialFormState = {
   Name: "",
@@ -26,7 +27,7 @@ export default function ContactForm() {
   const [inputWarnings, setInputWarnings] = useState(initialWarningState)
 
   const handleInputChange = event => {
-    event.target.placeholder = event.target.name;
+    event.target.placeholder = event.target.name
     setInputWarnings({
       ...inputWarnings,
       [event.target.name]: false,
@@ -53,6 +54,7 @@ export default function ContactForm() {
       name = true
     } else {
       event.target.parentNode.parentNode[0].placeholder = "Name Cannot be Empty"
+      event.target.parentNode.parentNode[0].value = ""
       name = false
     }
     /* email validation */
@@ -61,19 +63,27 @@ export default function ContactForm() {
     ) {
       email = true
     } else {
-      event.target.parentNode.parentNode[1].placeholder = "Please enter valid email"
+      event.target.parentNode.parentNode[1].placeholder =
+        "Please enter valid email"
+      event.target.parentNode.parentNode[1].value = ""
       email = false
     }
     /* message validation */
     if (inputValues.Message !== "") {
       message = true
     } else {
-      event.target.parentNode.parentNode[2].placeholder = "Message cannot be empty"
+      event.target.parentNode.parentNode[2].placeholder =
+        "Message cannot be empty"
+      event.target.parentNode.parentNode[2].value = ""
       message = false
     }
-    setInputWarnings({Name: !name , Email : !email, Message : !message})
-    resetFormValues(event);
-    setInputValues(initialFormState);  
+    setInputWarnings({ Name: !name, Email: !email, Message: !message })
+    /* form success */
+    if (name && email && message) {
+      sendForm(inputValues)
+      resetFormValues(event)
+      setInputValues(initialFormState)
+    }
   }
   return (
     <StyledForm>
