@@ -5,7 +5,7 @@ export const sendForm = ({ Name, Email, Message }) => {
     message: Message,
   }
   let formRequest = new XMLHttpRequest()
-  formRequest.open("POST", "http://arctindev-formapp.herokuapp.com/")
+  formRequest.open("POST", "https://arctindev-formapp.herokuapp.com/")
   formRequest.setRequestHeader("content-type", "application/json")
   formRequest.onload = () => {
     if (formRequest.responseText === "success") {
