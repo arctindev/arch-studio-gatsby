@@ -56,7 +56,10 @@ export default function Header({ onPage }) {
           </ListItem>
         </NavigationList>
       </Navigation>
-      <HamburgerButton onClick={() => handleButtonClick(active)}>
+      <HamburgerButton
+        aria-label="Navigation"
+        onClick={() => handleButtonClick(active)}
+      >
         {active ? <HamburgerActive /> : <Hamburger />}
       </HamburgerButton>
 

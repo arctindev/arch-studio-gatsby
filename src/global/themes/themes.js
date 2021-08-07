@@ -4,6 +4,7 @@ const secondColor = "#eeeff4"
 const thirdColor = "#7d828f"
 const forthColor = "#60636d"
 const fifthColor = "#C8CCD8"
+const sixthColor = "#DF5656"
 
 export const dayTheme = {
   colors: {
@@ -84,5 +85,6 @@ export const dayTheme = {
     contactFormPlaceholder: fifthColor,
     contactFormText: firstColor,
     contactFormBorder: firstColor,
+    contactFormWarning: sixthColor,
   },
 }

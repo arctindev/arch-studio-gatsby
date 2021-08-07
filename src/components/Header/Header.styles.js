@@ -61,7 +61,7 @@ export const HamburgerNavigation = styled.nav`
   }
 `
 
-export const NavigationList = styled.div`
+export const NavigationList = styled.ul`
   display: ${({ active }) => (active ? "block" : "none")};
   display: flex;
   flex-direction: column;
